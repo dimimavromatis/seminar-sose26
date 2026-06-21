@@ -1,0 +1,689 @@
+﻿Nr.;Titel;Autoren;Jahr;Relevante Textstellen
+1. ;Leveraging Large Language Models for Scalable and Explainable Cybersecurity Log Analysis;Palma et al.;2025;"1. Abkehr von manueller Feature-Entwicklung und Regelwerken
+„LLMs [...] can inherently capture rich contextual information from raw log data without extensive preprocessing, potentially offering improved adaptability and detection accuracy in real-world cybersecurity scenarios.“
+Seite/Abschnitt: S. 2, Kap. 1 (Introduction)
+Relevanz: Erklärt die grundlegende technologische Veränderung: Während traditionelle ML-Modelle mühsame manuelle Merkmalsextraktion (Feature Engineering) benötigen, können LLMs Rohdaten direkt verstehen. Dies erweitert die Maßnahmen, da auch komplexe semantische Zusammenhänge erfasst werden, die in starren Regeln fehlen
+.
+2. Lokale Ausführbarkeit auf Standard-Hardware
+„This resource barrier has become a primary driver for research into smaller, more efficient models suitable for local deployment, directly aligning with the needs of SMEs. [...] The majority of our experiments [...] were conducted on a consumer-grade NVIDIA GeForce RTX 3060 Ti GPU with 8GB of VRAM.“
+Seite/Abschnitt: S. 3, Kap. 1 (Introduction)
+Relevanz: Dies adressiert die spezifische Einschränkung von KMUs (begrenzte Budgets). Die KI-Maßnahme wird von einer teuren Cloud-Lösung zu einer lokal kontrollierbaren, kostengünstigen Ressource erweitert, was zudem den Datenschutz (GDPR) verbessert, da sensible Logs das Unternehmen nicht verlassen
+.
+3. Rollenwechsel: KI als „Cyber-Berater“ für Nicht-Experten
+„AI agents act as cyber consultants, offering effective strategies, best practices, and supporting iterative learning processes. [...] the same system that found the anomaly is also able to explain in an understandable way the issue and also provide assistance, suggestions, and even training to avoid the same issue (proactive).“
+Seite/Abschnitt: S. 4, Kap. 2 (Related Works)
+Relevanz: KI erweitert die Cybersicherheit von einer reinen Erkennungssoftware hin zu einem proaktiven Assistenzsystem. Da KMUs oft keine eigenen Security-Analysten haben, macht die KI die Ergebnisse durch verständliche Erklärungen für Laien erst nutzbar
+.
+4. Quantifizierbare Entlastung und Reduzierung der „Alert Fatigue“
+„By drastically reducing false positives, they lower investigation costs and analyst fatigue [...]. Assuming each false positive requires 30 min of analyst time at a cost of 50 euros/hour, the labor cost savings from LLMs compared to XGBoost are [...] 150,500 euros [pro 10.000 Logs].“
+Seite/Abschnitt: S. 55, Kap. 5 (Case Study)
+Relevanz: Dies zeigt die operative Veränderung. Traditionelle SIEM-Systeme überfluten Nutzer oft mit Fehlalarmen (Alert Fatigue)
+. Der KI-Ansatz erweitert die Maßnahme um eine enorme Präzision (94,2% Precision beim Top-Modell gegenüber 38,8% bei XGBoost), was die begrenzten personellen Ressourcen in KMUs schont
+.
+5. Umgang mit Unsicherheit und Triage
+„Approximately 12% of samples exhibited high uncertainty [...]. In these instances, LLMs [...] generated multiple plausible classifications or hedged explanations [...], enabling effective triaging and prioritization for human analyst review.“
+Seite/Abschnitt: S. 39, Kap. 4.3
+Relevanz: Anstatt einer bloßen Ja/Nein-Entscheidung erweitern KI-Ansätze die Analyse um eine Unsicherheitsmetrik (Entropie). KMU-Mitarbeiter wissen so genau, bei welchen 12 % der Fälle sie genauer hinschauen müssen, anstatt alle Logs manuell prüfen zu müssen
+.
+6. Anpassungsfähigkeit durch RAG und Prompt Engineering
+„LLMs fine-tuned with retrieval-augmented generation (RAG) techniques maintained stable detection performance over time, effectively adapting to new threat intelligence without requiring full retraining.“
+Seite/Abschnitt: S. 39, Kap. 4.3
+Relevanz: Traditionelle Maßnahmen veralten schnell (Zero-Day-Lücke). KI-basierte Ansätze erweitern die Verteidigung durch die Fähigkeit, neue Bedrohungsinformationen dynamisch in den Analyseprozess zu integrieren, ohne dass das Grundmodell neu programmiert werden muss
+."
+2.;A generative AI-driven cybersecurity framework for small and medium enterprises software development - an ANN-ISM approach;Awan et al. ;2026;"1. Überwindung von Datenknappheit durch synthetische Angriffsdaten (GANs)
+„Synthetic attack / traffic data generation: GANs can produce realistic network-traffic patterns, malware traces, or unusual user behavior logs. This enables SMEs — which often lack large, labeled cybersecurity datasets — to build or train detection models even under data scarcity.“
+Abschnitt: Tab. 12
+Relevanz: Eine der größten Hürden für KMUs ist das Fehlen eigener historischer Angriffsdaten zum Trainieren von Abwehrsystemen. KI (speziell GANs) erweitert die Maßnahmen, indem sie realistische, aber künstliche Daten erzeugt, mit denen KMU-eigene Systeme trainiert werden können, ohne auf externe Datenbanken angewiesen zu sein.
+2. Hierarchische Priorisierung begrenzter Ressourcen (ISM-Ansatz)
+„Using ISM can assist us in developing a clear hierarchical image and allow SMEs to recognize the main areas where security should be improved and make correct decisions regarding the use of the resources. It is an emerging application of ISM to cybersecurity strategy development...“
+Abschnitt: Contribution of the study
+Relevanz: KMUs leiden oft unter „blinden Flecken“ bei der Ressourcenallokation. Der KI-basierte ISM-Ansatz verändert die Strategie, indem er die Abhängigkeiten zwischen Bedrohungen visualisiert (z. B. wie automatisiertes Phishing als Basis für Ransomware dient). Dies ermöglicht eine logische statt einer zufälligen Priorisierung der Abwehrmaßnahmen
+.
+3. Verschiebung von reaktiver zu prädiktiver Abwehr (ANN-Modell)
+„The implementation of generative AI allows preventing threats and responding in advance. The forecasting and prevention of possible security breach will be done correctly by ANN models which will enable the SMEs to forecast and handle the threats before they interfere with normal operations.“
+Abschnitt: Implications of the study
+Relevanz: Traditionelle Maßnahmen in KMUs sind meist reaktiv (man reagiert auf einen Alarm). Das ANN-Modell (Künstliches Neuronales Netzwerk) erweitert dies um eine prädiktive Komponente, die Bedrohungsmuster erkennt, bevor ein tatsächlicher Schaden entsteht
+.
+4. KI-gestütztes „Secure-by-Design“ in der Softwareentwicklung
+„LLMs can be used to help developers identify insecure code patterns, or propose secure variants of the code—reducing the risk of adding a vulnerability in the development process (particularly where the security knowledge of an SME user is limited).“
+Abschnitt: Tab. 12
+Relevanz: In KMUs fehlt oft spezialisiertes Fachwissen in der sicheren Programmierung. KI erweitert hier die Cybersicherheit direkt in den Entwicklungsprozess (SDLC), indem sie unsichere Codemuster identifiziert und sicherere Alternativen vorschlägt
+.
+5. Automatisierte Triage und Entlastung kleiner IT-Teams
+„LLMs can assist in parsing logs, alerts, and generating human readable summaries or remediation recommendations—decreasing the amount of small teams have to do, and reducing response time.“
+Abschnitt: Tab. 12
+Relevanz: Da KMUs oft nur sehr kleine IT-Teams haben, verändert KI den Arbeitsalltag durch automatische Zusammenfassungen von Log-Daten und Handlungsempfehlungen in natürlicher Sprache, was die Reaktionszeit massiv verkürzt
+.
+6. Vierstufiges Reifegradmodell für die KI-Adoption
+„The structure of the generative AI-driven model... is divided into four different assessment steps: Novice (0-15%)... Comprehension (15-50%)... Development (50-85%)... Advanced (85-100%).“
+Abschnitt: Evaluation of the proposed model
+Relevanz: Das Paper führt ein spezifisches Reifegradmodell ein, das KMUs hilft, ihre eigenen KI-Sicherheitsmaßnahmen einzuordnen. Es bietet einen strukturierten Pfad von der bloßen Identifikation (Novice) bis zur vollständigen Automatisierung und Verfeinerung der Sicherheitsstrategie (Advanced)
+."
+3.;A Flexible Security Analytics Service for the Industrial IoT;Empl und Pernul;2021;"1. Transformation von Daten zu „Wisdom“ (Weisheit)
+„Only those who process this network data, recognize this information’s context and make predictions can become game-changers. [...] In it, data generates information, information creates knowledge, and knowledge makes wisdom. [...] quick reactions build upon wisdom.“
+Abschnitt/Seite: S. 2, Kap. 1 (Introduction)
+Relevanz: Dieses Paper erweitert traditionelle Maßnahmen (die oft nur Daten sammeln), indem es die KI-basierte Analyse in die DIKW-Hierarchie einordnet. Es zeigt, dass Cybersicherheit für KMUs erst dann proaktiv wird, wenn durch Machine Learning aus bloßen Daten „Wisdom“ für schnelle Reaktionen generiert wird.
+2. Überbrückung der Wissenslücke durch ein „Security Analytics Repository“
+„This problem [lack of knowledge] can be minimized with the usage of a peer-reviewed repository. [...] Public repositories’ usage fills the knowledge gap between SMEs and larger companies and leads to high-quality analytical techniques. Moreover, this fosters the exchange of knowledge...“
+Abschnitt/Seite: S. 6, Kap. 4.2 (Design Solution)
+Relevanz: Eine wesentliche Erweiterung ist der gemeinschaftliche Ansatz. Da KMUs keine eigenen Experten haben, verändert die KI-basierte Maßnahme den Prozess dahingehend, dass sie fertige, von Experten geprüfte Analyse-Modelle (z. B. für Anomalieerkennung) aus einem Repository beziehen und anpassen können, statt sie selbst entwickeln zu müssen.
+3. Fünfstufige Erweiterung der Analyse-Fähigkeiten
+„The security analytics service offers five security capabilities [...] (i) descriptive, (ii) diagnostic, (iii) detective, (iv) predictive, and (v) prescriptive. [...] While descriptive and diagnostic capabilities are strictly retrospective, a detective capability reflects interactions in real-time, and predictive and prescriptive capabilities are prospective.“
+Abschnitt/Seite: S. 3/5, Kap. 2.3 & 3.3
+,
+Relevanz: Das Paper definiert präzise, wie KI die Maßnahmen erweitert: von der bloßen Rückschau (was ist passiert?) hin zur Echtzeit-Erkennung (was passiert gerade?) und schließlich zur Vorhersage sowie konkreten Handlungsempfehlung (was wird passieren und was ist zu tun?).
+4. Der Digitale Zwilling als präskriptives KI-Werkzeug
+„In this context, the digital twin is, therefore, regarded as a foresight security module. Since the digital twin can also derive recommendations for actions and forecasts, the digital twin is considered the prescriptive module.“
+Abschnitt/Seite: S. 9, Kap. 6 (Evaluation)
+Relevanz: Eine sehr konkrete paper-spezifische Erkenntnis: Der Einsatz von Digitalen Zwillingen (unterstützt durch ML) erweitert die Sicherheit im IIoT. KMUs können damit Angriffe simulieren oder den Zustand von Maschinen vorhersagen, was über klassische IT-Sicherheit weit hinausgeht und die Brücke zur Operational Technology (OT) schlägt.
+5. Flexibles „Bundling“ von Techniken statt starrer Software
+„Analytical pipelines can be created by bundling multiple analytical techniques together. [...] SMEs can swap or bundle them depending on their desired outcome (e.g., proactive reaction or forensics).“
+Abschnitt/Seite: S. 5/8, Kap. 1 & 5.2
+,
+Relevanz: KI-Ansätze verändern die Architektur von Sicherheitstools. Statt einer „Black Box“ ermöglichen sie KMUs ein modulares System, in dem verschiedene KI-Algorithmen (Regressionsmodelle, Fuzzy Logic etc.) je nach Bedarf kombiniert werden können, um spezifische Bedrohungen in der Fertigung zu adressieren."
+4.;AI-Driven Cybersecurity for Personalized Threat Detection in Small and Medium Scale Enterprises;Selvamani et al.;2026;"1. Dezentralisierung durch Edge-basiertes Machine Learning
+„[...] the proposed framework involves the development of an edge-based system with machine learning models directly implemented on the IoT devices. This can be useful for reducing the need of resources for a centralized system and improve real-time detection of threats by the system.“
+Abschnitt: 3.1 AI-Based Threat Detection
+Relevanz: KI verändert die Architektur der Cybersicherheit für KMUs grundlegend, indem sie die Analyse von zentralen, teuren Servern direkt auf die Endgeräte (Edge) verlagert. Dies erweitert die Maßnahmen um eine Echtzeit-Komponente, die ohne Latenz reagieren kann.
+2. Blockchain als automatisierter Ersatz für Sicherheitsteams
+„Since blockchain data is decentralized by nature, it allows for a tamper-proof recording of security events, which are thus very beneficial for use in SMEs as SMEs tend to not have dedicated cybersecurity teams which can monitor and verify data manually.“
+Abschnitt: 3.2 Integration of Blockchain for Data Integrity and Security
+Relevanz: Da KMUs oft keine Experten zur manuellen Log-Verifizierung haben, erweitert die KI-Blockchain-Kombination die Maßnahmen um eine automatisierte Vertrauensinstanz. Die Integrität der Daten wird systemisch garantiert, statt durch menschliche Überwachung.
+3. Modell-Optimierung für Ressourcen-Constraints
+„To overcome this challenge, lightweight AI models can be used [...] Techniques like model pruning, quantization, and knowledge distillation aid in reducing the machine learning models’ size and parameters while simultaneously maintaining accuracy.“
+Abschnitt: 5.3 Resource Constraints
+Relevanz: Das Paper nennt konkrete KI-Techniken (Pruning, Quantisierung, Knowledge Distillation), die traditionelle Cybersicherheit erst KMU-tauglich machen. Diese Methoden „schrumpfen“ komplexe KI-Modelle so weit, dass sie auf billiger Hardware laufen, ohne an Schutzwirkung zu verlieren.
+4. Fokus auf Human-Centric UX für fachfremde Mitarbeiter
+„To address this knowledge gap, the system should feature an intuitive interface that simplifies threat monitoring [...] Visual dashboards further enhance usability, offering real-time insights into system status and proactively suggesting actionable steps to mitigate risks.“
+Abschnitt: 5.4 Human-Centric Security Interfaces
+Relevanz: KI-Ansätze erweitern die Cybersicherheit um eine intuitive Ebene. Für KMU-Inhaber ohne technisches Fachwissen transformiert die KI komplexe Bedrohungsdaten in einfache, visuelle Handlungsempfehlungen, was die Handlungsfähigkeit im Ernstfall erhöht.
+5. Hybride Abwehr durch CNN-LSTM-Kombinationen
+„They proposed a hybrid deep learning-based Intrusion Detection System (IDS) which combines Conventional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks to address these challenges.“
+Abschnitt: 2 Literature Survey
+Relevanz: Hier wird eine spezifische technische Erweiterung genannt: Die Kombination von CNNs (für räumliche Mustererkennung) und LSTMs (für zeitliche Abfolgen) ermöglicht es KMUs, komplexe Angriffe wie DDoS-Attacken präziser zu erkennen als mit einfachen, regelbasierten Filtern."
+5.;Benchmarking and Evaluating Large Language Models in Phishing Detection for Small and Midsize Enterprises;Zhang et al.;2025;"1. Paradigmenwechsel: Inhalts- statt URL-Analyse
+„[...] integrating email content into instruction template for LLM input, enabling advanced contextual examination to identify complex social engineering techniques that previous methods, including machine learning and deep learning techniques, could not detect. [...] Unlike the spam filters in email services, LLMs not only provides detection results but also includes a detailed report explaining its decisions.“
+Abschnitt/Passage:
+Relevanz: Traditionelle Maßnahmen scheitern oft an Spear-Phishing oder Business Email Compromise (BEC), da diese Angriffe oft keine bösartigen URLs enthalten. KI (LLMs) erweitert die Abwehr um eine semantische Inhaltsprüfung, die den Kontext versteht und dem Nutzer erklärt, warum eine E-Mail verdächtig ist.
+2. „Bigger is not always better“ – Effizienz kleiner Modelle
+„The most interesting discovery from the result is that it challenges ‘bigger-is-better’ mindset [...] Llama-3-8b-Instruct performs extremely well in the benchmark and unexpectedly outperforms llama-3-70b-instruct. This can be an advantage for very small business or even individuals to implement one of the most capable LLM on budget.“
+Abschnitt/Passage:
+Relevanz: Dies verändert die Sicherheitsstrategie von KMUs radikal: Man benötigt keine riesigen Serverfarmen mehr. Ein kleineres, effizienteres Modell (8B Parameter) bietet oft eine bessere oder gleichwertige Schutzwirkung bei massiv geringeren Kosten und Hardwareanforderungen.
+3. Radikale Kostensenkung durch Low-Budget-Hardware
+„the hardware which performs the experiment is extremely low-budget (less than $300) [...] most modern gaming graphic card that is 8GB and above is capable of inference the model. [...] In cases of an early stage startup, running the model on a laptop computer (gaming/MacBook) without extra spending is possible.“
+Abschnitt/Passage:
+Relevanz: Das Paper zeigt konkret auf, dass hochmoderne KI-Sicherheit für unter 300 $ Hardwarekosten (z. B. eine gebrauchte Tesla M40) oder sogar auf vorhandenen Laptops umsetzbar ist. Dies erweitert die Reichweite professioneller Cybersicherheit auf Kleinstunternehmen, die sich früher keine Enterprise-Lösungen leisten konnten.
+4. Implementierung ohne Expertenwissen (Zero-Shot-Ansatz)
+„This approach lies in its focus on base models with default parameters, emphasizing ease of implementation without the need for additional training or fine-tuning. Compared to existing methods, this approach simplifies adoption while maintaining robust detection capabilities.“
+Abschnitt/Passage:
+Relevanz: KI-Maßnahmen werden „demokratisiert“, da das Paper beweist, dass Basis-Modelle ohne mühsames „Fine-Tuning“ oder spezialisierte Data Scientists extrem effektiv sind. KMUs können diese Tools sofort „out-of-the-box“ einsetzen.
+5. Präskriptive Sicherheit durch „Instruction Templates“
+„The proposed prompt template enables LLMs to provide explanations and suggestions, assisting users in making informed decisions. [...] providing likelihood and reasons. In addition, it can also provide suggestions in a production environment...“
+Abschnitt/Passage:
+Relevanz: Die Maßnahme wird von einem passiven Filter zu einem aktiven Berater erweitert. Durch die Angabe einer Wahrscheinlichkeit („Likelihood in %“) und konkreter Handlungsempfehlungen („Suggestions“) wird die menschliche Komponente im KMU direkt geschult und unterstützt."
+6. ;Intrusion Detection System using Autoencoder based Deep Neural Network for SME Cybersecurity;Ubaidillah et al. ;2021;"1. Schwachstellen traditioneller Ansätze vs. KI-Automatisierung
+Textstelle: „It shows that all security features mostly used signature-based detection which is less capable against advanced network threats. Moreover, IT staff is needed to be configured manually, so there will be possibilities that human errors might occur in the process and causing vulnerability towards the company's security.“
+Seite/Abschnitt: Seite 210, Abschnitt I (INTRODUCTION)
+Relevanz: Dieser Ausschnitt identifiziert zwei Hauptprobleme traditioneller Maßnahmen in KMUs: die Ineffektivität signaturbasierter Systeme gegen moderne Angriffe und die Fehleranfälligkeit durch manuelle Konfigurationen. KI verändert dies, indem sie diese Prozesse automatisiert und über starre Signaturen hinausgeht.
+2. Integration in bestehende Infrastrukturen
+Textstelle: „This solution can be integrated into any existing security systems such as Firewall, IPS, IDS, or SIEM in the network.“
+Seite/Abschnitt: Seite 210, Abschnitt I (INTRODUCTION)
+Relevanz: KI-Ansätze ersetzen traditionelle Maßnahmen nicht einfach, sondern erweitern sie. Das Paper beschreibt die KI als ein komplementäres System, das bestehende Werkzeuge (wie Firewalls oder SIEM) um eine intelligente Analyseebene ergänzt.
+3. Kosten- und Komplexitätsreduktion durch spezifische Architekturen (Autoencoder)
+Textstelle: „With the pre-processed datasets and the implementation of Autoencoder into the core of the DNN, it can mitigate most of the issues mentioned earlier. This process will ensure the solution to still be inexpensive and not complex to understand.“
+Seite/Abschnitt: Seite 211, Abschnitt III (RESEARCH DESIGN)
+Relevanz: Für KMUs ist die Barriere oft der Preis und die Komplexität. Das Paper zeigt auf, wie der Einsatz von Autoencodern zur Merkmalsextraktion (Feature Extraction) die Rechenlast und damit die Kosten senkt, was den Einsatz von Deep Learning für KMUs erst praktikabel macht.
+4. Platzierung als „Inline Network Feature Extractor“
+Textstelle: „The network feature extractor is preferable to be installed inline right after the SMEs’ firewall to efficiently catch every incoming packet and extract the features required by AEDNN while simultaneously letting it pass through into the SMEs’ border router.“
+Seite/Abschnitt: Seite 213, Abschnitt IV (EXPERIMENTAL RESULTS / Fig. 4)
+Relevanz: Dies beschreibt eine konkrete infrastrukturelle Erweiterung. Die KI-Komponente wird direkt hinter der Firewall platziert, um Merkmale in Echtzeit zu extrahieren, ohne den Datenfluss zu stoppen – eine Erweiterung der traditionellen passiven Überwachung hin zur aktiven Echtzeit-Klassifizierung.
+5. Funktion als zusätzliche Sicherheitsebene ohne Latenz
+Textstelle: „The proposed solution does not act as the replacement for SMEs network security solution rather than to be used on top of it as an extra layer of security since the proposed implementation does not hold the packet at all during the prediction and classification process.“
+Seite/Abschnitt: Seite 214, Abschnitt V (CONCLUSION)
+Relevanz: KI erweitert das Sicherheitsmodell um eine „zusätzliche Schicht“, die parallel arbeitet. Da die Pakete während der Analyse nicht angehalten werden, bietet dieser KI-Ansatz eine Erweiterung der Sicherheit, ohne die für KMUs kritische Netzwerkperformance zu beeinträchtigen."
+7.;Intelligent detection and recovery from cyberattacks for small and medium-sized enterprises;Angel et al.;2020;"1. Automatisierung und proaktive Erkennung durch KI-Tools
+Textstelle: „These tools, by means of artificial intelligence, provide advanced threat and attack detection techniques and allow the automation of security processes
+. [...] Thus, it is essential to have a proactive security system allowing to detect threats and attacks timely in order to minimize damages.“
+Abschnitt: II. A. (Mechanisms of Detection and Defense Against Attacks)
+Relevanz: KI verändert traditionelle Maßnahmen, indem sie den Fokus von einer rein reaktiven Verteidigung hin zu einer proaktiven, automatisierten Erkennung verschiebt
+. Dies ist für KMUs entscheidend, da deren Sicherheitsteams Angriffe oft nicht schnell genug vorhersagen können
+.
+2. Modularisierung der KI durch Mikroservices für spezifische Angriffe
+Textstelle: „We have implemented an individual micro-service for each selected attack (recall DDoS, SQLi and DGA) under the hypothesis that it is more efficient to perform an independent detection (in terms of precision) than having a single algorithm to detect all the attacks.“
+Abschnitt: III. C. (Micro-services for Detection of Known Attacks)
+Relevanz: Das Paper zeigt eine technologische Erweiterung auf: Anstatt eines monolithischen Sicherheitssystems nutzt der KI-Ansatz spezialisierte Mikroservices (z. B. Decision Trees für DDoS oder LSTM für DGA), um die Präzision der Erkennung für KMU-spezifische Bedrohungen zu maximieren
+.
+3. Erweiterung der Eindämmung durch „Deception Technology“
+Textstelle: „From IASEC, we propose creating a virtual environment that should be designed to cheat the cybercriminals, emulating that it is possible to perform privilege escalation and steal user credentials. This solution is based in Deception Technology .“
+Abschnitt: III. A. 3. (Containment)
+Relevanz: KI-basierte Ansätze erweitern die traditionelle Isolierung infizierter Hosts um intelligente „Täuschungssysteme“ (Honeypots/Sandboxes)
+. Diese locken Angreifer in virtuelle Umgebungen, um Zeit für eine Wiederherstellungsstrategie zu gewinnen, ohne dass das KMU den Betrieb einstellen muss
+.
+4. Intelligente Selbstheilung (Self-recovery) mittels Blockchain-Integration
+Textstelle: „This system should include a list containing malicious IP addresses that belong to the attacks previously detected using the micro-services. These IP addresses should be recorded in a blockchain network. Like this, it is possible to obtain a database updated with the malicious addresses for the server, allowing a faster recovery of the systems.“
+Abschnitt: III. A. 4. (Recovery)
+Relevanz: Hier wird die traditionelle Wiederherstellung (Backups) um eine KI-gestützte Komponente erweitert
+. Die durch KI identifizierten Angreifer-Daten werden unveränderlich in einer Blockchain gespeichert, was KMUs eine automatisierte und schnellere Rückkehr zum Normalzustand ermöglicht
+.
+5. Effizienzsteigerung durch gezielte Algorithmenwahl (z.B. Decision Stump)
+Textstelle: „We have selected Decision Stump
+ to develop the SQLi detection micro-service, since it obtain the best results among the studied algorithms (Naïve Bayes
+ and Decision Trees
+).“
+Abschnitt: III. C. 2. (SQLi Detection)
+Relevanz: Das Paper liefert konkrete Erkenntnisse darüber, welche KI-Algorithmen für KMUs am effizientesten sind
+. Die Auswahl von Algorithmen wie „Decision Stump“ für SQL-Injektionen zeigt, dass nicht immer komplexe Deep-Learning-Modelle nötig sind, sondern gezielte KI-Ansätze die Ressourcen von KMUs schonen können
+."
+8.;Safeguarding the Future: Forecasting Cybersecurity and Privacy Challenges and Solutions in Emerging Technologies for SMEs;Campos und Coutinho;2025;"1. Kompensation fehlenden Fachwissens
+Textstelle: „The role of artificial intelligence in enhancing cybersecurity is essential, particularly in addressing the widespread lack of knowledge and awareness about cybersecurity issues
+.“
+Seite/Abschnitt: Seite 713, Abschnitt 1 (Introduction)
+Relevanz: KI wird hier als Werkzeug beschrieben, das eine der größten Schwachstellen von KMUs adressiert: den Mangel an internem Expertenwissen. Sie erweitert die Sicherheitsmaßnahmen, indem sie Wissenslücken schließt und die allgemeine „Cyber-Awareness“ technisch unterstützt.
+2. Erweiterung der Erkennung auf neue Bedrohungstypen (Deepfakes)
+Textstelle: „AI tools help detect data breaches more quickly, counter deepfakes, and address phishing attempts, thereby enhancing the cybersecurity posture of SMEs.“
+Seite/Abschnitt: Seite 714, Abschnitt 2 (Literature Review)
+Relevanz: Das Paper nennt konkrete neue Fähigkeiten. Während traditionelle Maßnahmen oft bei Social-Engineering-Angriffen scheitern, kann KI KMUs helfen, moderne Bedrohungen wie Deepfakes und hochspezialisierte Phishing-Versuche schneller zu identifizieren.
+3. Entwertung traditioneller Basismaßnahmen (MFA-Bypass)
+Textstelle: „However, cybercriminals are also leveraging AI to bypass traditional defences like multi-factor authentication (MFA), making it crucial for SMEs to stay ahead in this evolving threat environment
+.“
+Seite/Abschnitt: Seite 714, Abschnitt 2 (Literature Review)
+Relevanz: Dies ist eine kritische Erkenntnis zur Veränderung: KI macht bewährte Standards wie die Mehrfaktor-Authentisierung (MFA) angreifbar. Das zwingt KMUs dazu, ihre Maßnahmen über diese Basisschutzmechanismen hinaus zu erweitern, um gegen KI-gesteuerte Angriffe bestehen zu können.
+4. Übergang zu prädiktiven und automatisierten Reaktionen
+Textstelle: „Despite the potential risks, AI is recognized for its ability to enhance threat detection, automate response mechanisms, and predict potential attacks, provided it is integrated thoughtfully with existing systems.“
+Seite/Abschnitt: Seite 717, Abschnitt 3.3.3 (The Role of AI and Employee Training)
+Relevanz: KI erweitert traditionelle, oft statische Schutzsysteme um drei Dimensionen: Vorhersage (Prediction), Automatisierung der Reaktion (Automated Response) und eine verbesserte Erkennungsrate. Entscheidend ist hier der Hinweis auf die notwendige Integration in bestehende Systeme.
+5. Hybride Strategie: KI-Tools als unmittelbare Priorität
+Textstelle: „SMEs should prioritize enhancing employee training, conducting regular security audits, and adopting AI-driven security tools.“
+Seite/Abschnitt: Seite 717, Abschnitt 3.3.3 (Best Practices)
+Relevanz: KI-basierte Ansätze werden hier nicht mehr als ferne Zukunftstechnologie, sondern als „Immediate Action“ eingestuft, die KMUs zur sofortigen Stärkung ihrer Sicherheitslage neben klassischen Audits einsetzen sollten."
+9.;Enhancing Cybersecurity for SMEs: Integrating AI and SIEM Solutions for Threat Detection and Mitigation;Plaza-Hernandez et al.;2026;"1. Paradigmenwechsel: Von statischen Regeln zu dynamischer Anpassung
+Textstelle: „Unlike traditional rule-based security systems that rely on predefined signatures to detect threats, AI-driven solutions use extensive datasets to learn and adapt dynamically. This adaptability allows AI systems to identify known and previously unseen threats effectively.“
+Abschnitt: 3 AI in Cybersecurity
+Relevanz: Dieser Ausschnitt beschreibt die grundlegende Veränderung der Abwehrmechanismen. Während traditionelle Maßnahmen an starre Signaturen gebunden sind, erweitern KI-Ansätze die Verteidigung um die Fähigkeit, aus Daten zu lernen und so auch völlig neue („unseen“) Bedrohungen zu erkennen.
+2. Synergie durch Integration: KI als Komplement zu SIEM
+Textstelle: „SIEM systems centralize data collection, analysis, and incident management [...] Meanwhile, AI technologies offer dynamic capabilities for identifying known and unknown threats, complementing SIEM’s effectiveness. Integrating both technologies provides a proactive defence against evolving cyber risks.“
+Abschnitt: Abstract
+Relevanz: Hier wird die Erweiterung konkret: KI ersetzt nicht das traditionelle SIEM (Security Information and Event Management), sondern veredelt es. Die KI liefert die „dynamischen Fähigkeiten“, die dem rein verwaltenden SIEM fehlen, um eine proaktive Verteidigungslinie für KMUs zu bilden.
+3. Automatisierung der Reaktion durch SOAR-Integration
+Textstelle: „Security Orchestration, Automation, and Response (SOAR) systems enhance SIEM platforms by automating incident response workflows, enabling faster containment, and mitigating threats without manual intervention. [...] This automation reduces response times, minimizes the damage from cyberattacks, and increases the efficiency of security teams, especially for SMEs with limited staff.“
+Abschnitt: 4 Advanced Cyber Threat Detection and Mitigation
+Relevanz: KI-basierte Ansätze erweitern die Maßnahmen um die Ebene der automatisierten Reaktion. Da KMUs oft kein rund um die Uhr verfügbares Fachpersonal haben, ist die Fähigkeit des Systems, Bedrohungen ohne menschliches Eingreifen (z. B. durch Isolierung von Endpunkten) zu entschärfen, eine kritische funktionale Erweiterung.
+4. Stärkung der Datenintegrität durch Blockchain und DID
+Textstelle: „Beyond conventional SIEM architectures, emerging technologies such as blockchain-based logging mechanisms and Decentralized Identity (DID) solutions offer promising enhancements [...] When integrated with AI-enhanced SIEM platforms, these features strengthen trust in the data used for anomaly detection and incident response.“
+Abschnitt: 2 Overview of SIEM Systems
+Relevanz: Das Paper zeigt auf, wie KI-basierte SIEM-Plattformen durch Blockchain-Technologie erweitert werden können. Dies verändert die Sicherheit, indem es das Vertrauen in die Log-Daten stärkt, welche die Grundlage für die KI-Anomalieerkennung bilden.
+5. Bewältigung der „Alert Fatigue“
+Textstelle: „SIEM platforms often produce a high volume of alerts, many of which may be false positives. [...] AI’s ability to learn from data, identify anomalies, and automate responses provides a layer of intelligence and efficiency for organizations that often lack dedicated security teams.“
+Abschnitt: 2 Overview of SIEM Systems
+ / 5 Conclusions
+Relevanz: Traditionelle Systeme überfordern KMUs oft mit einer Flut an Fehlalarmen. KI verändert diesen Prozess, indem sie eine „Intelligenzschicht“ einzieht, die Fehlalarme reduziert und die Effizienz der knappen personellen Ressourcen steigert."
+10.;SecurSentry: An AI-Driven Security Information and Event Management System for SMEs;Cordon-Munoz et al.;2026;"1. Dynamische Korrelation statt statischer Regeln (Deep Learning & GANs)
+Textstelle: „SecurSentry incorporates state-of-the-art deep learning (DL) techniques to compute correlation scores across heterogeneous security events, thereby enabling the identification of complex, multi-stage threat patterns. [...] Generative Adversarial Networks (GANs) and generative AI will be leveraged to create adaptive rules for detecting similar attack patterns.“
+Abschnitt: 3.2 Real-Time Threat Detection
+Relevanz: KI verändert die Erkennung von einer starren, regelbasierten Logik hin zu einem dynamischen System, das Korrelationen zwischen völlig unterschiedlichen Ereignissen berechnet. Durch den Einsatz von GANs zur Erstellung adaptiver Regeln wird die Abwehr flexibel genug, um auch unbekannte (Zero-Day) oder komplexe, mehrstufige Angriffe zu erfassen.
+2. Autonome Schadsoftware-Analyse durch „Imitation Learning“
+Textstelle: „Unlike traditional sandboxing solutions, SecurSentry leverages Imitation Learning (IL) to execute and analyze malware samples autonomously, optimizing threat detection. The integration of IL allows the system to select and deploy sandboxing environments adaptively [...] enabling the detection of anomalous behaviour with unparalleled precision.“
+Abschnitt: 3.3 Intelligent Sandboxing
+Relevanz: Traditionelle Sandboxes sind oft statisch. Dieses Paper zeigt eine Erweiterung auf, bei der KI (speziell Imitation Learning) genutzt wird, um verdächtige Dateien autonom in einer kontrollierten Umgebung auszuführen und zu analysieren. Dies ermöglicht KMUs eine hochpräzise Identifizierung von Schadcode ohne manuelles Experten-Eingreifen.
+3. Prädiktive Antizipation von Angriffsschritten
+Textstelle: „SecurSentry integrates AI [...] employing techniques such as sequence modeling (e.g., LSTM networks) and stochastic reasoning (e.g., Markov Chains)—to anticipate potential future attack stages based on observed event sequences. It harnesses this intelligence to continuously prioritize high-risk events and enable more proactive and adaptive threat response strategies.“
+,
+Abschnitt: 3.4 Threat Intelligence
+Relevanz: KI erweitert die Cybersicherheit um eine zeitliche Dimension. Durch LSTM-Netzwerke und Markow-Ketten kann das System künftige Phasen eines laufenden Angriffs vorhersagen und Gegenmaßnahmen proaktiv einleiten, bevor der Schaden eintritt.
+4. Reduktion der kognitiven Last durch GenAI-Agenten und RAG
+Textstelle: „This module will incorporate a multi-agent generative AI system, in which specialized agents collaborate to guide and automate threat detection, rule creation [...] The architecture employs Retrieval-Augmented Generation (RAG) over vector databases [...] to deliver highly relevant, low-latency insights and reduce analyst cognitive load.“
+Abschnitt: 3.9 User Interface
+Relevanz: Eine wesentliche Veränderung für KMUs ist die Demokratisierung von Expertenwissen. Durch den Einsatz von Generativer KI und RAG (Retrieval-Augmented Generation) werden Analysten bei der Untersuchung von Vorfällen und der Regelerstellung assistiert, was die Barriere für Personal mit geringerer Erfahrung massiv senkt.
+5. Autonome Eindämmung ohne menschliche Intervention
+Textstelle: „This system can make informed decisions and take immediate action to mitigate threats, marking a significant innovation in SIEM solutions. [...] SOAR systems complement SIEM platforms by automating incident response workflows. This automation facilitates rapid containment and mitigation of threats without manual intervention.“
+,
+Abschnitt: 3.6 SOAR / 2 Integrating AI with SIEM Systems
+Relevanz: Die traditionelle, oft nur beobachtende Rolle eines SIEM wird durch ein KI-gestütztes SOAR-Modul (Security Orchestration, Automation, and Response) zu einem aktiven Verteidiger erweitert. Das System isoliert infizierte Endpunkte oder blockiert bösartige IPs selbstständig auf Basis historischer Muster."
+11.;Lightweight AI-Driven intrusion detection for SMEs;Kamruzzaman;2026;"1. Überwindung der Grenzen signaturbasierter Systeme
+Textstelle: „Conventional signature-based intrusion detection systems (IDS) are insufficient in modern environments due to their inability to detect novel (zero-day) attacks and their dependence on continuously updated rule sets. [...] These systems also produce high false-positive rates, causing alert fatigue and reduced operational efficiency.“
+,
+Abschnitt: 1 Introduction (S. 351–352)
+Relevanz: Diese Stelle erklärt die technologische Erweiterung: KI ersetzt starre Regelsätze durch lernfähige Mustererkennung, was KMUs vor neuen Bedrohungen schützt, die herkömmliche Systeme übersehen würden, und gleichzeitig die „Alarm-Müdigkeit“ durch weniger Fehlalarme reduziert.
+2. Proaktive Erkennung statt reiner Reaktion
+Textstelle: „By learning patterns from historical data, these models can detect both known and unknown threats in real-time or near-real-time. Their ability to generalize from diverse features [...] positions them as key tools for proactive threat detection.“
+Abschnitt: 1 Introduction (S. 352)
+Relevanz: KI verändert den Cybersicherheits-Ansatz von KMUs von einer reaktiven (reagieren auf bekannte Signaturen) zu einer proaktiven Strategie. Die Fähigkeit zur Generalisierung erlaubt es, Anomalien im Netzwerkverkehr zu erkennen, bevor ein spezifischer Angriffsschaden entsteht.
+3. Ressourceneffizienz als Ermöglicher für KMUs
+Textstelle: „For SMEs, lightweight and interpretable ML models can provide cost-effective, scalable, and adaptive security solutions. [...] Unlike conventional intrusion detection systems designed for large organizations with abundant computational and human resources, the proposed approach emphasizes lightweight, performance-efficient, and easily deployable models...“
+,
+Abschnitt: 1 Introduction (S. 352)
+Relevanz: KI-Ansätze erweitern die Sicherheitsmaßnahmen nicht nur technisch, sondern auch ökonomisch. Durch „Lightweight“-Modelle (wie XGBoost oder LightGBM) wird Cybersicherheit auf Standard-Hardware (z. B. Intel Core i7, 16 GB RAM) ohne teure Cloud-Infrastruktur oder GPUs möglich
+,
+.
+4. Entscheidungsunterstützung durch Interpretierbarkeit (XAI)
+Textstelle: „By employing models like Random Forest and LightGBM, which provide clear feature importance metrics, this study enhances the explainability of detection decisions, a feature crucial for cybersecurity analysts in SMEs.“
+Abschnitt: 4.4 Comparison with previous studies (S. 363)
+Relevanz: Ein kritischer Punkt für KMUs ist der Mangel an Experten. KI-Modelle erweitern traditionelle Maßnahmen, indem sie durch „Feature Importance“ (Wichtigkeit von Merkmalen wie src_bytes oder duration) transparent machen, warum ein Alarm ausgelöst wurde
+,
+. Dies hilft fachfremden IT-Mitarbeitern, Bedrohungen schneller einzuschätzen.
+5. Der „Performance-Efficiency“-Trade-off
+Textstelle: „XGBoost emerged as the best-performing model, narrowly outperforming LightGBM and Random Forest. Its high accuracy, precision, and recall values make it well-suited for mission-critical applications like intrusion detection, where both low false positives and low false negatives are paramount.“
+Abschnitt: 4.1 Model performance comparison (S. 360)
+Relevanz: Das Paper zeigt konkret auf, dass Ensemble-Modelle wie XGBoost eine Genauigkeit von über 99 % erreichen können, während sie gleichzeitig extrem kleine Modellgrößen (ca. 0,28 MB) und schnelle Inferenzzeiten (0,0021 ms/Probe) beibehalten
+,
+. Dies verändert die Sicherheitslandschaft für KMUs, da nun höchste Präzision mit minimalem technischem Overhead kombinierbar ist."
+12.;Enhancing Cyber-Resilience for Small and Medium-Sized Organizations with Prescriptive Malware Analysis, Detection and Response;Ilca et al.;2023;"1. Erweiterung durch verhaltensbasierte Analyse gegenüber Signaturen
+Textstelle: „Traditional signature-based detection methods are often inadequate in detecting emerging and polymorphic malware variants, leading to a significant time gap between malware release and detection. [...] By employing machine-learning algorithms and behavior-based analysis, the system can effectively detect and classify sophisticated malware strains, including those previously unseen.“
+Abschnitt: Abstract / 3. Difficulties in Malware Detection (S. 2, S. 8)
+Relevanz: KI-basierte Ansätze verändern die Maßnahmen von KMUs weg von der reinen Dateiprüfung (Signaturen) hin zur Analyse von Verhaltensmustern. Dies schließt die zeitliche Lücke („Time Gap“) bei neuen Bedrohungen, die herkömmliche Software erst nach einem Update erkennen würde
+.
+2. Reaktion auf die „KI-Bewaffnung“ der Angreifer
+Textstelle: „Recent advancements in generative AI have led to the development of proof-of-concept models for polymorphic malware. These models demonstrate the potential of dynamically mutating malware payloads to evade detection... BlackMamba successfully evaded an 'industry-leading' EDR application...“
+Abschnitt: 3.B Using AI for development-mutating malware (S. 9)
+Relevanz: Das Paper zeigt, dass KI-basierte Verteidigung für KMUs keine Option, sondern eine Notwendigkeit ist, da Angreifer generative KI (z. B. ChatGPT API) nutzen, um polymorphen Code zu erstellen, der traditionelle EDR-Filter (Endpoint Detection and Response) umgeht
+.
+3. Von deskriptiver zu präskriptiver Sicherheit durch Metriken
+Textstelle: „A set of equations is proposed to perform predictive analysis using specific algorithms and models [...] to assess and quantify relevant metrics... TSM = α1 ∗ CA + α2 ∗ RS + α3 ∗ RT [Threat Severity Metric]“
+Abschnitt: 5. Design and Implementation (S. 13–14)
+Relevanz: KI-Ansätze erweitern Maßnahmen um eine quantitative Komponente. Statt nur zu sagen „da ist ein Virus“, berechnet das System durch Gewichtung von Kritikalität (CA), Ressourcen-Schweregrad (RS) und benötigter Reaktionszeit (RT) eine präzise Bedrohungsmetrik
+. Dies ermöglicht KMUs eine datengestützte Priorisierung ihrer begrenzten Ressourcen
+.
+4. Massive Beschleunigung der Erkennungszeit (TTD)
+Textstelle: „The proposed solution demonstrates a shorter time to detect (TTD) of 1.37 s from the initial point of executing a potential malicious file... In comparison, Windows Defender... exhibits a TTD of 5.66 s.“
+Abschnitt: 7. Testing the Prototype / Table 1 (S. 28)
+Relevanz: Konkrete Messwerte belegen die Veränderung: Durch die Integration von KI-Modellen (wie Random Forest oder KNN) und automatisierten Workflows wird die Erkennungszeit im Vergleich zu Standard-Windows-Maßnahmen um fast das Vierfache verkürzt
+.
+5. Automatisierung der Vorfallreaktion (SOAR)
+Textstelle: „Security Orchestration, Automation, and Response (SOAR) module—This module combines advanced technologies, intelligent automation, and streamlined workflows to enhance the efficiency and effectiveness of security operations.“
+Abschnitt: 2. Organization Security Objectives (S. 5)
+Relevanz: Traditionelle Maßnahmen erforderten manuelle Eingriffe von IT-Mitarbeitern. KI-gestützte SOAR-Module automatisieren die Isolation und Analyse (z. B. via n8n oder Cortex-Responders), was KMUs hilft, den Mangel an spezialisiertem Sicherheitspersonal auszugleichen
+."
+13.;A Review on Cyber Resilience Model in Small and Medium Enterprises;Cahyono et al.;2022;"1. Paradigmenwechsel: Von Cybersicherheit zu Cyber-Resilienz
+Textstelle: „The essential difference between cybersecurity and cyber resilience is that cybersecurity emphasizes IT systems. In contrast, cyber resilience is closely related to risk management, business delivery, and business continuity.“
+Relevanz: KI-basierte Ansätze verändern die Maßnahmen von KMUs grundlegend, indem der Fokus nicht mehr nur auf dem Schutz technischer Systeme liegt, sondern auf der Aufrechterhaltung des Geschäftsbetriebs unter Angriffen. KI wird hier zum Werkzeug des Risikomanagements
+.
+2. Strukturelle Erweiterung durch eine 5-Schichten-Architektur (CR-Modell)
+Textstelle: „The technical architectures of the CR model are built on five layers. The five layers are services, data, generative models, data analysis, and resilience scale. Machine learning and data mining based a probabilistic model approach works to solve the problem of the CR model.“
+Relevanz: Traditionelle Maßnahmen werden durch ein KI-gestütztes Schichtenmodell erweitert, das von der Asset-Erfassung (Services) bis hin zur automatisierten Messung der Widerstandsfähigkeit (Resilience Scale) reicht
+. Dies bietet KMUs einen Bauplan für eine durchgehende Überwachung.
+3. Nutzung probabilistischer Modelle für die Unsicherheit
+Textstelle: „The fundamental problem of the CR model is to formulate the probability distribution of each cyber event into the Gaussian base [...] to ensure that the probabilistic model is adaptive in the face of uncertainty. [...] It is simple and effective to model observed samples' history and access them using ML and DM techniques.“
+Relevanz: KI erweitert Maßnahmen um die Fähigkeit, mit Unsicherheit umzugehen. Statt starrer Ja/Nein-Regeln lernt die „Gauß-Basis“ die Wahrscheinlichkeitsverteilung normaler Ereignisse und passt sich adaptiv an neue Situationen an
+.
+4. Kombination von GMM und GAN für komplexe Datenströme
+Textstelle: „The CR model combines old generative model strength (GMM) and new generative model potency in the novelty of the generative networks (GN) [...] to address the issues of high dimensional data, collective probabilistic methods, and mixed membership in GMM.“
+Relevanz: Das Paper zeigt eine technische Erweiterung auf: Die Kombination von Gaußschen Mischmodellen (GMM) für einfache Mustererkennung mit Generative Adversarial Networks (GAN) für hochdimensionale Datenströme
+. Dies ermöglicht KMUs die Analyse komplexer Netzwerkdaten, an denen traditionelle Systeme scheitern würden.
+5. Messbarkeit der Sicherheit durch die „Resilience Scale“
+Textstelle: „The highest layer [...] is responsible for measuring the probability density of cyber events to monitor the resilience scale of each service over time. [...] Resilience scale shows the scale of the resilience of the service against cyber threats.“
+Relevanz: KI verändert Cybersicherheit von einem rein qualitativen („Wir fühlen uns sicher“) zu einem quantitativen Monitoring. Durch Dichteschätzung und Anomaliendetektion wird die Sicherheit in einer Skala messbar und über die Zeit hinweg vergleichbar
+."
+14.;Predicting CyberSecurity Incidents Using Machine Learning Algorithms - A Case Study of Korean SMEs;Mohasseb et al.;2019;"1. Erweiterung durch kollektive Intelligenz (Centralized Hub)
+Textstelle: „The main scenario motivating our work is one in which a centralized hub [...] collects data generated by multiple companies (organisations) and therefore maintains a centralized dataset representing the collective experience of those companies. The datasets collected from these companies are used to train one centralized classifier, which would then have better performance than any individual instance belonging to a single company.“
+Abschnitt: 3 The Proposed Approach
+Relevanz: Dies verändert die Sicherheitsmaßnahmen von KMUs grundlegend: Statt dass jedes Unternehmen isoliert auf Angriffe reagiert, ermöglicht KI einen gemeinschaftlichen Lernprozess. Ein KMU profitiert von den Vorfällen und Abwehrmaßnahmen anderer Unternehmen, was die individuelle Erkennungsrate massiv steigert
+,
+.
+2. Automatisierte Vorhersage von Reaktionsmaßnahmen (Forward-looking)
+Textstelle: „The first problem is forward-looking to attempt to predict future aspects of Cyber security incidents. More specifically, how an organization can gain the ability to predict response actions to future Cyber security incidents involving malware. We consider two questions here: a) how to predict a response action from the name of malicious code, and b) how to predict a response action from the type of malware involved in the incident.“
+Abschnitt: 3.2 Research Problems
+Relevanz: KI erweitert traditionelle Maßnahmen um eine prädiktive Komponente. Anstatt dass ein IT-Mitarbeiter manuell entscheiden muss, ob eine Datei gelöscht, blockiert oder isoliert wird, kann das System basierend auf dem Namen oder Typ der Malware die effektivste Reaktion („deleted“, „blocked“, „segregated“) mit hoher Genauigkeit (bis zu 81% bei SVM) vorhersagen
+,
+,
+.
+3. Unterstützung der digitalen Forensik (Backward-looking)
+Textstelle: „The second problem is backward-looking to investigate, for example, as part of a digital forensics process, properties of current incidents. More specifically, how an organization can utilize its knowledge of the response actions in guiding digital forensics analysis to determine the type of malware or the name of the malicious code to investigate.“
+Abschnitt: 3.2 Research Problems
+Relevanz: KI verändert den forensischen Prozess. Traditionell wird vom Schadcode auf den Schaden geschlossen. Hier ermöglicht KI den umgekehrten Weg: Aus den dokumentierten Reaktionen kann das System präzise auf die Art der Bedrohung (z. B. Spyware oder Virus) rückschließen (bis zu 92% Genauigkeit), was die Analysezeit nach einem Vorfall in KMUs drastisch verkürzt
+,
+.
+4. Analyse unstrukturierter Daten durch Text-Mining
+Textstelle: „A model has been developed using text mining methods, such as n-gram, bag-of-words and machine learning algorithms for the classification of incidents and their response actions. [...] Each entry [...] has the following metadata: [...] Detail: this is a free text value to describe any other detail about the incident.“
+,
+Abschnitt: Abstract / 3.1 Description of the Dataset
+Relevanz: Traditionelle Maßnahmen beruhen oft auf strukturierten Log-Daten. Dieser KI-Ansatz erweitert dies auf unstrukturierte „Freitext“-Beschreibungen von Vorfällen. Durch Methoden wie „n-gram“ und „Bag-of-Words“ können KMUs wertvolle Informationen aus informellen Berichten extrahieren, die für herkömmliche Systeme unsichtbar wären
+,
+,
+.
+5. Identifikation von Bedrohungsquellen trotz Fehlklassifizierung
+Textstelle: „Malware types could actually be used for the identification of malicious code even-though from a security point of view there is no explicit research showing that this is possible.“
+Abschnitt: 4.3 Discussion
+Relevanz: Das Paper zeigt eine neue, KI-spezifische Erkenntnis: Algorithmen können Zusammenhänge zwischen Malware-Typen und spezifischem Schadcode erkennen, die in der klassischen Cybersicherheits-Forschung bisher nicht explizit belegt waren. Dies erweitert das Analyse-Instrumentarium von KMUs um neue Korrelationsmöglichkeiten
+."
+15.;Evaluation of AI-based use cases for enhancing the cyber security defense of small and medium-sized companies (SMEs);Kant und Johannsen;2022;"1. Überwindung der Ineffizienz bei gezielten Angriffen
+Textstelle: „Concerning malware protection, traditional signature-based security systems do detect only 75% to 95% of untargeted mass malware attacks and just 27% of targeted malware cyber attacks. [...] The detection rates of IT systems that do not use any form of AI cannot be sustained at the same level of security and protection when attackers are also using AI methods...“
+Abschnitt: 2 AI capabilities for cyber defense (S. 5–6)
+Relevanz: Diese Stelle liefert eine konkrete quantitative Begründung für den Wandel: Traditionelle Maßnahmen versagen massiv (nur 27 % Erkennung) bei gezielten Angriffen. KI erweitert diesen Schutzraum, indem sie die notwendige Abwehr gegen ""Offensive AI"" (KI-gestützte Angriffe) bereitstellt, die ohne KI-Integration nicht mehr auf demselben Sicherheitsniveau gehalten werden kann
+.
+2. Verschiebung von Signatur- zu Inhalts- und Kontextanalyse
+Textstelle: „Classical security systems work on the basis of rules or signatures without checking the content or context behavior, for instance of data packages. [...] By means of Deep Learning, a deviation from a 'normal use' can be detected. [...] Next Generation Firewalls are able to check the behavior and content of a data packet...“
+Abschnitt: 2 / Table 1 (S. 5, 45)
+Relevanz: KI verändert die grundlegende Funktionsweise von Sicherheitsmaßnahmen wie Firewalls. Während traditionelle Systeme nur ""Etiketten"" (Signaturen) prüfen, ermöglichen KI-basierte Ansätze eine Tiefenprüfung des Inhalts und des Verhaltens von Datenpaketen, was die Erkennung von Anomalien in Echtzeit ermöglicht
+.
+3. Zentralisierung durch KI-basiertes SIEM für ressourcenarme KMUs
+Textstelle: „Based on our research, especially for SMEs with less resources, SIEM is considered to be of very high AI-based added value since it has interfaces to a variety of other security features and can be seen as a centralized bundle point... An AI-based SIEM can decide whether human intervention is required concerning an incident (partial autonomy).“
+Abschnitt: 4 Results / Table 1 (S. 11, 47)
+Relevanz: KI erweitert traditionelle SIEM-Systeme um eine autonome Bewertungskomponente. Für KMUs ist dies entscheidend, da das System vorfiltert, ob ein menschliches Eingreifen überhaupt nötig ist, wodurch die knappen personellen Ressourcen entlastet werden
+.
+4. Proaktive Risikoprofilierung statt reaktiver Schadensbegrenzung
+Textstelle: „Scoring Risk in a network is furthermore classified as a high potential use case: in particular SMEs lack of understanding their individual risk profile. [...] AI can help to identify and prioritize security related risks. [...] A major advantage: less personnel (e.g. IT specialists) would be required for evaluating risks.“
+Abschnitt: 4 Results / Table 1 (S. 11, 46)
+Relevanz: Traditionelle Maßnahmen in KMUs sind oft reaktiv. KI erweitert das Spektrum um eine kontinuierliche, automatisierte Risikobewertung. Dies verändert die Cybersicherheitsstrategie hin zu einer datengestützten Priorisierung von Schwachstellen, ohne dass permanent externe Experten für die Risikoanalyse benötigt werden
+.
+5. Automatisierung der Vorfallreaktion auf Endgeräten (EDR)
+Textstelle: „EDR can detect security related incidents on end-devices, which can directly stop an initial cyber threat from spreading among the company’s IT network. [...] This ability is crucial to rapidly respond in real time and stop incidents from spreading and extending.“
+Abschnitt: 4 Results / Table 1 (S. 11, 44)
+Relevanz: Während klassische Antivirenprogramme oft nur Dateien löschen, erweitern KI-basierte EDR-Systeme die Maßnahme um eine aktive Reaktionskomponente (""Response""). Durch die Echtzeit-Überwachung und automatische Isolation von Endpunkten wird die Ausbreitung (Lateral Movement) von Angriffen im KMU-Netzwerk gestoppt
+."
+16.;PACY: ProActive Cybersecurity for Small and Medium Enterprises;Fildi et al.;2025;"1. Spezialisierte Multi-Agenten-Architektur statt monolithischer KI
+Textstelle: „[...] instead of relying on a single monolithic artificial intelligence, PACY adopts an architecture based on a team of AI agents, each specializing in a specific cybersecurity domain. A key aspect of these agents lies in how each specialized agent acquires its specific expertise. This is achieved through a meticulous process of prompt engineering.“
+Abschnitt: II. AI ASSISTANT (Seite 6)
+Relevanz: Diese Stelle zeigt, dass die Erweiterung traditioneller Maßnahmen nicht nur durch „eine KI“ geschieht, sondern durch eine Aufteilung in Fachdomänen (z. B. Ransomware, Phishing). Dies ermöglicht eine tiefere technische Expertise, die KMUs normalerweise intern fehlt.
+2. Transformation von natürlicher Sprache in technische Diagnose
+Textstelle: „PACY allows the user to ‘tell’ problems in their own words, without the need to use technical terminology. The AI interprets these descriptions and guides the user through targeted questions, simplifying diagnosis.“
+Abschnitt: II. AI ASSISTANT (Seite 6)
+Relevanz: KI verändert die Interaktionsbarriere. Traditionelle Tools erfordern technisches Fachwissen; der KI-Ansatz erlaubt es Laien, Vorfälle in Alltagssprache zu melden, während die KI die Übersetzung in technische Analyseschritte übernimmt.
+3. KI als „Intelligenter Vermittler“ für OSINT-Quellen
+Textstelle: „PACY acts as an intelligent intermediary. When a user uploads a suspicious file or the platform detects [...] the need for external analysis, PACY autonomously sends the request to third-party services [VirusTotal, IntelX], using its own API keys [...]. The result [...] is processed and presented to the user clearly and concisely directly in the chat interface.“
+Abschnitt: II. AI ASSISTANT (Seite 9)
+Relevanz: Hier wird eine konkrete Erweiterung beschrieben: KI automatisiert den Zugriff auf komplexe externe Sicherheitsdatenbanken (OSINT). KMUs müssten diese Dienste sonst manuell bedienen und die Ergebnisse mühsam selbst interpretieren.
+4. Automatisierte Triage und Routing (Switch Logic)
+Textstelle: „The Triage Agent [...] through a switch logic, sorts the user to the agent best suited to handle the specific case. For example, if the Triage Agent detects symptoms of file encryption, it will direct to the Ransomware Agent [...].“
+Abschnitt: II. AI ASSISTANT (Seite 9)
+Relevanz: Der KI-Ansatz ersetzt den menschlichen Ersthelfer (Triage). Die Fähigkeit der KI, aus vagen Nutzerangaben den Typ des Angriffs zu identifizieren und spezialisierte Prozesse einzuleiten, beschleunigt die Reaktionszeit erheblich.
+5. Automatisierung der regulatorischen Compliance (Incident Reporting)
+Textstelle: „The system automatically aggregates all bot–user interactions into a structured, standards-compliant report. [...] This format aligns with widely used incident response practices, ensuring that the result is clear, actionable, and usable in technical, legal, and administrative areas. [...] they support compliance with regulatory frameworks, including the General Data Protection Regulation (GDPR, Art. 33) and the NIS2 Directive [...].“
+Abschnitt: IV. AUTOMATICALLY GENERATED REPORTS (Seite 16)
+Relevanz: Dies erweitert die Cybersicherheit um die administrative Komponente. KI generiert aus dem Chatverlauf automatisch rechtssichere Berichte, was KMUs hilft, komplexe gesetzliche Meldepflichten (wie NIS2) ohne teure Rechtsberatung zu erfüllen.
+6. Reduktion der kognitiven Last gegenüber Standard-KI
+Textstelle: „PACY takes the lead, directing the user through structured steps and handling technical analysis in-house. Google Gemini, on the other hand, positions itself as an interlocutor that responds to the specific questions posed, requiring the user to actively define the direction of the conversation [...]. PACY’s approach [...] improves usability, reduces operational risk, and increases efficiency in post-incident management.“
+Abschnitt: V. RESULTS (Seite 19)
+Relevanz: Das Paper zeigt auf, dass spezifisch trainierte KI-Systeme die traditionelle Cybersicherheit besser erweitern als allgemeine Sprachmodelle, da sie den Prozess aktiv steuern („proaktiv“), anstatt nur passiv Fragen zu beantworten."
+17.;Data management in Polish SMEs in the era of AI – threats and benefits of AI-based tools;Chmielarz;2024;"1. Paradigmenwechsel: Von signaturbasierter zu verhaltensbasierter Erkennung
+Textstelle: „Traditional endpoint security solutions rely on signature-based detection, which involves identifying known threats and blocking them. [...] In the case of AI-powered endpoint security solutions they make use of machine learning algorithms to identify anomalous behaviour and to detect previously unknown threats.“
+Relevanz: Dieser Ausschnitt beschreibt eine fundamentale technische Erweiterung: Während traditionelle Maßnahmen nur bekannte Bedrohungen blockieren können („Signaturen“), erweitert die KI die Sicherheit auf die Erkennung von unbekannten Angriffsmustern durch Verhaltensanalyse.
+2. Bewältigung der Datenkomplexität (IoT-Kontext)
+Textstelle: „Detecting threats is directly related to processing large amounts of data. [...] The demand for data processing is projected to grow accompanying the development of the Internet of Things [...]. Artificial Intelligence [...] offers the advantages of processing huge amounts of data in an efficient and accurate manner making use of algorithms to search for abnormal behaviour in IT systems.“
+Relevanz: Die KI verändert Cybersicherheit dahingehend, dass sie die Skalierbarkeit sicherstellt. Traditionelle, menschzentrierte Maßnahmen scheitern an der Datenmenge moderner vernetzter Infrastrukturen (IoT), während KI-Algorithmen diese Datenflut effizient nach Anomalien durchsuchen können.
+3. Das Konzept der „Drei Rs“: Robustness, Response und Resilience
+Textstelle: „In the case of Robustness [...] cybersecurity systems that employ AI are fitted with the abilities of self-testing and in necessary self-healing. [...] In the aspect of Response [...] AI-powered security tools [...] can generate decoys and honeypots. Resilience means that systems that employ AI are much better at recognising cyberattacks [...] largely due to the fact that they can work tirelessly.“
+Relevanz: Diese Stelle definiert konkret, wie KI die Maßnahmen erweitert: Durch Selbstheilungskräfte (Robustness), aktive Täuschungsmanöver wie Honeypots (Response) und eine ermüdungsfreie Überwachung (Resilience), was über die rein statische Abwehr traditioneller Firewalls oder Antivirenprogramme hinausgeht.
+4. Automatisierung von Routineaufgaben zur Ressourcenoptimierung
+Textstelle: „AI can be effectively applied to automate certain aspects of cybersecurity in the organisation. In this way cybersecurity personnel can focus on the overall security of the organisation’s IT resources while basic, routine tasks are handled by AI.“
+Relevanz: KI verändert die Arbeitsweise in KMUs, indem sie Fachpersonal von Routineaufgaben entlastet. Da KMUs oft nur einen einzigen Mitarbeiter für IT haben
+, ermöglicht diese Automatisierung eine Konzentration auf strategische Sicherheit statt auf kleinteilige Überwachung.
+5. Identifikation von Innentätern (Insider Threats)
+Textstelle: „Detection and reaction to insider threats is a challenge [...]. However, AI-based tools can analyse the patterns of network users behaviours and indicate the ones that require closer investigation.“
+Relevanz: Traditionelle Maßnahmen greifen bei Innentätern oft nicht, da diese legitimen Zugriff haben. KI erweitert die Sicherheit hier um eine psychologisch-technische Komponente, indem sie Abweichungen im normalen Nutzerverhalten erkennt."
+18.;Data Exfiltration Detection System using Machine Learning;Harippriya et al.;2025;"1. Transformation von reaktiver zu proaktiver und adaptiver Verteidigung
+Textstelle: „This proactive strategy enhances earlier threat discovery abilities despite insufficient resources, transforming cybersecurity from being reactive in nature to proactive and adaptive defense. As an affordable solution, it allows SMEs to significantly minimize cyberattack repercussions [...]“
+Abschnitt: I. INTRODUCTION (Seite 2/3)
+Relevanz: KI-Ansätze verändern die grundlegende Strategie von KMUs. Statt erst nach einer Verschlüsselung (Ransomware) zu reagieren oder Lösegeld zu zahlen, ermöglicht KI eine „adaptive Verteidigung“, die Bedrohungen erkennt, bevor der Schaden eintritt
+.
+2. Erweiterung durch verhaltensbasierte Analyse ohne Signaturen
+Textstelle: „More contemporary technology is the use of machine learning (ML) for behavior-based detection of host activity or traffic anomalies without the need for explicit signatures.“
+Abschnitt: II. LITERATURE REVIEW (Seite 3)
+Relevanz: Traditionelle Maßnahmen basieren oft auf bekannten Signaturen. Die KI erweitert dies um die Fähigkeit, Anomalien im Datenverkehr allein durch das Verhalten zu identifizieren, was KMUs vor „Zero-Day-Exploits“ schützt, für die es noch keine Signaturen gibt
+.
+3. Ressourceneffizienz durch „Lightweight“-KI-Modelle
+Textstelle: „Compared to dynamic systems or expert systems, our system focuses on interpretability, resource usage optimization, and proactive detection—important requirements for successful SME deployment.“
+Abschnitt: II. LITERATURE REVIEW (Seite 4)
+Relevanz: Das Paper zeigt, dass KI-Maßnahmen für KMUs speziell ressourcenschonend („lightweight“) gestaltet werden müssen. Im Gegensatz zu komplexen Expertensystemen, die ständige menschliche Intervention erfordern, ermöglicht dieser KI-Ansatz eine automatisierte Überwachung, die auch ohne teure Sicherheitsexperten funktioniert
+.
+4. Merkmalsselektion zur Überwindung technischer Hürden
+Textstelle: „It is not efficient nor practical for SMEs with limited resources to use such a large dataset. To reduce the number of features, feature selection is applied. [...] Embedded method: feature selection during training [...] are efficient in terms of performance because feature importance is garnered as part of the learning process.“
+Abschnitt: III. DATA EXFILTRATION DETECTION SYSTEM (Seite 4)
+Relevanz: Die KI verändert den Analyseprozess, indem sie aus tausenden von Datenpunkten (Features) autonom die relevantesten Indikatoren für einen Angriff herausfiltert
+. Dies ist eine Erweiterung, da traditionelle manuelle Analysen bei der heutigen Datenflut in KMUs nicht mehr praktikabel sind
+.
+5. Erkenntnisgewinn über Malware-Eigenschaften
+Textstelle: „Analysis of the results from the system's deployment can help SMEs understand the malware features that facilitate data exfiltration, highlighting the importance of robust cybersecurity protections.“
+Abschnitt: V. CONCLUSIONS (Seite 6)
+Relevanz: Die KI erweitert die Cybersicherheit um eine edukative Komponente. Durch die Analyseergebnisse lernen KMUs, welche spezifischen Merkmale (z. B. Prozessaktivitäten oder Registry-Änderungen) auf Datenabfluss hindeuten, was ihr allgemeines Sicherheitsbewusstsein stärkt
+."
+19.;ML-Based Security Analytics in South African SMEs: A Review and Classification;Singano et al.;2023;"1. Überwindung der Fehlalarm-Problematik traditioneller Systeme
+Textstelle: „[...] current countermeasures such as cryptography and firewalls possess limitations in detecting attacks such as intrusion
+. The reason for this
+ claims that 99% of the detections produced by such systems are false positives. As a result, to overcome such shortcomings, the use of machine learning has been increasing [...] to not only accurately identify problems but also come up with solutions.“
+Abschnitt: I. INTRODUCTION
+Relevanz: Diese Stelle liefert eine sehr konkrete Begründung für die Erweiterung: Traditionelle Tools wie Firewalls produzieren in der Einbruchserkennung eine massive Anzahl an Fehlalarmen (99%), die KMU-Personal überfordern. KI verändert dies, indem sie die Präzision erhöht und so die „Alert Fatigue“ reduziert.
+2. Prädiktive Analyse von Massendaten zur Antizipation
+Textstelle: „[...] machine learning can provide analytics and intelligence to protect against ever evolving cyberattacks by quickly analysing millions of events and tracking a wide variety of cyber threats to anticipate and act in advance of the threat.“
+Abschnitt: I. INTRODUCTION
+Relevanz: Die KI erweitert den Schutz zeitlich nach vorne. Während traditionelle Maßnahmen oft reaktiv wirken (blockieren nach Regelverletzung), ermöglicht KI durch die Analyse von Millionen von Ereignissen das Antizipieren von Bedrohungen, noch bevor der eigentliche Angriff erfolgt.
+3. Schaffung von „Situational Awareness“ für Nicht-Experten
+Textstelle: „This increased situational awareness, in turn, equips them [SMEs] to respond promptly to cyber threats and anomalies, even in the absence of extensive cybersecurity expertise.“
+Abschnitt: IV. DISCUSSION AND ANALYSIS
+Relevanz: KI-basierte Ansätze verändern die Art der Reaktion. Sie bereiten komplexe Daten so auf, dass KMUs ein „Lagebewusstsein“ (Situational Awareness) erhalten. Dies ermöglicht es Laien, fundierte Entscheidungen zu treffen, was mit traditionellen, rein technischen Protokollen nicht möglich wäre.
+4. Dynamische Verhaltensanpassung statt statischer Regeln
+Textstelle: „ML techniques stand out for their ability to discern and adapt to deviations, thus improving the precision of identifying cyber threats. This focus on behavioural analysis underscores the dynamic nature of cyber threats, accentuating the imperative for SMEs [...] to embrace custom data-informed security strategies.“
+Abschnitt: IV. DISCUSSION AND ANALYSIS
+Relevanz: Traditionelle Maßnahmen sind oft statisch. KI erweitert dies durch verhaltensbasierte Analyse, die sich dynamisch an Abweichungen anpasst. Dies ist besonders wichtig für KMUs, da deren Netzwerkumgebungen oft sehr individuell sind und starre Standard-Regelsätze dort weniger effektiv greifen.
+5. Effizienz durch Semi-überwachtes Lernen (Implementierungsvorteil)
+Textstelle: „A semi-supervised machine learning technique was proposed to learn normal traffic for an enterprise and predict anomalous parts using a confidence value. Experimental results showed that the semi-supervised model performed better than the supervised model, making it easier to deploy in any network, as it only needed normal traffic to build its initial model.“
+Abschnitt: III. LITERATURE REVIEW
+Relevanz: Das Paper zeigt auf, dass KI-Ansätze die Hürden für KMUs senken, da sie nur „Normalverkehr“ zum Lernen benötigen. Dies ist eine entscheidende Erweiterung, da KMUs meist keine Datensätze von vergangenen Angriffen für ein Training klassischer (überwachter) Systeme besitzen."
+20.;SafeDocs: A Machine Learning-Based Framework for Malicious PDF Detection Tailored for SMEs;Le et al.;2023;"1. Analyse der strukturellen Metadaten statt Code-Signaturen
+Textstelle: „Unlike signature-based methods, it does not require constant updates and can detect novel, zero-day malware by analyzing structural characteristics rather than attack types or code similarities. [...] Additionally, JavaScript obfuscation does not impact metadata analysis since it focuses on file structure rather than code details.“
+Abschnitt: III. METHODOLOGY
+Relevanz: KI-Ansätze erweitern den Schutz von der herkömmlichen Suche nach bekanntem Schadcode (Signaturen) hin zur Untersuchung des „Skeletts“ einer Datei. Da Angreifer die Struktur eines PDFs kaum ändern können, ohne die Datei unbrauchbar zu machen, bietet die KI einen robusteren Schutz gegen verschleierte (obfuskierte) Angriffe, die traditionelle Scanner umgehen.
+2. Fokus auf „Malicious Keywords“ zur Überwindung von Verschleierung
+Textstelle: „PDFiD can help to detect obfuscation techniques that attackers often use to hide malicious code. Keywords such as /ObjStm signify object streams, which can be used to conceal malicious objects within benign ones. [...] By transforming the raw PDF files into structured feature vectors, we effectively enable the machine learning model to learn and discern between benign and malicious PDFs.“
+Abschnitt: III.B. Feature Engineering
+Relevanz: KI verändert die Erkennungslogik, indem sie gezielt nach strukturellen Anomalien sucht (z. B. versteckte Objekt-Streams), die für das menschliche Auge oder einfache Skripte unsichtbar sind. Die Umwandlung in „Feature-Vektoren“ ermöglicht es, subtile statistische Zusammenhänge zwischen Dateielementen zu finden.
+3. Pragmatische Modellauswahl für den SME-Einsatz
+Textstelle: „Random Forest [...] simplicity and high accuracy make it an attractive choice for SMEs without dedicated machine learning expertise; Low hardware requirements: unlike deep neural networks, it can run efficiently on basic hardware [...]; The model scales with the business and requires minimal upkeep.“
+Abschnitt: III.C. Machine Learning Model
+Relevanz: Das Paper zeigt, dass KI-Maßnahmen für KMUs so gestaltet sein müssen, dass sie geringe Hardware-Anforderungen haben und wartungsarm sind. Dies ist eine entscheidende Erweiterung, da KMUs oft keine Kapazitäten für komplexe Deep-Learning-Infrastrukturen oder ständiges Modell-Retraining haben.
+4. Automatisierte „Neutralisierung“ durch Umbenennung
+Textstelle: „PDFs flagged as malicious by the model have their extensions renamed to remove the .pdf suffix. It provides a clear visual indicator of potentially harmful files and prevents users from accidentally activating malicious PDF files.“
+Abschnitt: IV. BUILDING SAFEDOCS PROTOTYPE
+Relevanz: KI-gestützte Ansätze verändern den Workflow der Bedrohungsabwehr. Statt nur zu warnen, greift das System aktiv in das Dateisystem ein und neutralisiert die Ausführbarkeit verdächtiger Dateien präventiv, was das Risiko menschlichen Versagens (versehentlicher Klick) reduziert.
+5. Integration in bestehende Infrastrukturen (Active Directory)
+Textstelle: „SafeDocs should be installed on a dedicated server or virtual machine [...] leveraging Active Directory services on a Windows Server Domain Controller for access control. [...] Setting each OU’s Target Folder as the default download location for users and systems. It ensures that SafeDocs first scrutinize all downloaded PDF files before usage.“
+Abschnitt: V. SAFEDOCS ADOPTION IN SMES
+Relevanz: Die KI-Maßnahme wird hier als zentraler Kontrollpunkt in die bestehende Windows-Infrastruktur integriert. Durch die erzwungene Umleitung von Downloads in überwachte Ordner wird Cybersicherheit von einer optionalen Anwendung zu einem integralen Bestandteil des täglichen IT-Betriebs im KMU."
+21.;Enterprise Intrusion Detection Using Ensemble CNN-LSTM-GBM: Cross-Scale Performance Analysis;Nguyen et al.;2026;"1. Hybrid-Architektur zur Kompensation von Einzelschwächen
+Textstelle: „[...] combining convolutional neural networks (CNN), long short-term memory networks (LSTM), and gradient boosting machines (GBM) to leverage complementary strengths in spatial pattern recognition, temporal dependency modeling, and nonlinear relationship learning.“
+Abschnitt: 1 Introduction (Seite 224)
+Relevanz: KI-basierte Ansätze erweitern die Sicherheit, indem sie verschiedene Analyse-Dimensionen (räumlich, zeitlich, nicht-linear) gleichzeitig abdecken. Während traditionelle IDS oft nur auf eine Methode setzen, erlaubt dieser Ensemble-Ansatz eine umfassendere Bedrohungserkennung, die speziell auf die heterogenen Datenmuster in KMU-Netzwerken zugeschnitten ist
+,
+.
+2. Lösung des Datenmangels durch GANs und hybrides Labeling
+Textstelle: „Suggest a GAN-based synthetic data generation method combined with a cost-efficient hybrid labeling strategy - integrating rule-based heuristics and active learning - to address data imbalance and annotation challenges.“
+Abschnitt: 1 Introduction (Seite 224)
+Relevanz: Eine der größten Hürden für KMU-Cybersicherheit ist der Mangel an markierten Trainingsdaten (Labels). Das Paper stellt eine KI-Erweiterung vor, die synthetische Daten mittels GANs erzeugt und diese effizient labelt
+. Dies verändert den Prozess der Sicherheitsvorbereitung grundlegend, da KMUs nun hochwertige KI-Modelle nutzen können, ohne über riesige historische Datensätze zu verfügen
+,
+.
+3. Dynamisch gewichtete Entscheidungsfindung (Majority Voting)
+Textstelle: „The ensemble employs a dynamically weighted majority voting mechanism that adjusts model contributions based on their reliability [...]. This adaptive strategy enables the system to emphasize stronger models and minimize less reliable predictions under varying network conditions.“
+Abschnitt: 3.5 Ensemble Machine Learning Model (Seite 228)
+Relevanz: KI verändert die Reaktionsebene durch ein adaptives Wahlsystem. Anstatt starr Alarm zu schlagen, bewertet die KI die Zuverlässigkeit ihrer eigenen Sub-Modelle (CNN, LSTM, GBM) in Echtzeit
+. Dies minimiert Fehlalarme, was für KMUs mit geringer Personalstärke entscheidend ist
+.
+4. Kontinuierliche Modelladaption ohne komplettes Retraining
+Textstelle: „The adaptation operates through real-time data integration and synthetic sample generation using class-specific GANs for rare attack types. This feedback loop enables the model to adapt to novel attack patterns through incremental updates rather than full retraining [...].“
+Abschnitt: 3.6 Continuous Model Adaptation (Seite 228)
+Relevanz: Traditionelle Maßnahmen veralten oft schnell. Dieser KI-Ansatz führt eine Feedback-Schleife ein, die das System kontinuierlich durch inkrementelle Updates verbessert
+. KMUs erhalten dadurch eine Cybersicherheitsmaßnahme, die organisch mit den Bedrohungen mitwächst, ohne dass ständig Experten für eine Neukonfiguration eingreifen müssen
+.
+5. Erkenntnisse zur Skalierbarkeit (Cross-Scale Analysis)
+Textstelle: „The results reveal a noticeable decline in accuracy across all models when transitioning from the small-scale to the large-scale setting, with GBM experiencing a drop of 13.18%, LSTM 12.01%, and CNN 7.31%. This trend highlights the increased complexity and variability of traffic in larger environments [...]“
+Abschnitt: 4.3 Comparative Evaluation Across Enterprise Scales (Seite 230)
+Relevanz: Das Paper liefert die paper-spezifische Erkenntnis, dass KI-Modelle in kleineren KMU-Umgebungen (10–100 Geräte) präziser arbeiten als in Großunternehmen, da der Datenverkehr weniger komplex ist
+,
+. Dies unterstreicht, dass KMUs durch KI einen überproportional hohen Sicherheitsgewinn erzielen können
+."
+22.;PhishBuster: An Intelligent Web-Based Tool for Real-Time Malicious URL Detection in Small Businesses;Stephanie et al.;2026;"1. Automatisierte Mustererkennung statt manueller Prüfung
+Textstelle: „The combined use of machine learning (ML) and natural language processing (NLP) has emerged as a promising approach to combat phishing effectively. These methods enable systems to automatically recognize patterns in URLs, email texts, and website layouts, distinguishing harmful content from legitimate sources.“
+Seite/Abschnitt: Seite 40, Abschnitt 1 (Introduction).
+Relevanz: Dies zeigt den technologischen Wandel von manuellen Sicherheitschecks hin zu einer automatisierten Analyse durch KI (ML und NLP), die verschiedene Datenquellen (URL, Text, Layout) gleichzeitig korreliert.
+2. Proaktive Erkennung unbekannter Bedrohungen („Zero-Day“) vs. Blacklists
+Textstelle: „While Netcraft primarily relies on reputation-based blacklists and community reports to flag known malicious domains [...], our system employs a machine learning–driven classification approach capable of identifying previously unseen phishing URLs. This enables proactive detection without depending on preregistered datasets.“
+Seite/Abschnitt: Seite 53, Abschnitt 5 (Discussions).
+Relevanz: Einer der zentralen Fortschritte: Traditionelle Maßnahmen hängen oft von Datenbanken bekannter Angriffe ab (reaktiv). Der KI-Ansatz ermöglicht es KMUs, Angriffe zu erkennen, die noch nie zuvor registriert wurden (proaktiv).
+3. Anpassung an Ressourcenknappheit durch „Lightweight“-Modelle
+Textstelle: „Another limitation lies in the complexity and computational cost of DL–based models, which makes them less practical for lightweight or real-time deployment. To bridge these gaps, the proposed PhishBuster Add-On introduces a browser-integrated ML solution [...] with low computational requirements, specifically designed to enhance accessibility, scalability, and cybersecurity resilience within SME environments [...].“
+Seite/Abschnitt: Seite 43, Ende Abschnitt 2 (Related Works).
+Relevanz: KI-Ansätze erweitern den Schutz von KMUs, indem sie komplexe Deep-Learning-Modelle durch effizientere Algorithmen (wie XGBoost oder LightGBM) ersetzen, die auf Standard-Hardware ohne teure Infrastruktur laufen.
+4. Erweiterung durch spezifische linguistische und strukturelle Merkmalsextraktion
+Textstelle: „The most relevant extracted features include: Address embedding (IP instead of domain), Number of special symbols (@, -, //), Presence of suspicious terms (login, account, paypal), Link and domain length, Use of URL shorteners, Appearance in search engines.“
+Seite/Abschnitt: Seite 47, Abschnitt 3.4 (Methodology - Feature extraction).
+Relevanz: Das Paper zeigt auf, wie KI die Sicherheitsanalyse vertieft, indem sie subtile Merkmale (z.B. die Abwesenheit einer Suchmaschinen-Indizierung oder spezifische Zeichenmuster) nutzt, die in traditionellen Filtern oft unberücksichtigt bleiben.
+5. Echtzeit-Feedbackschleifen und adaptive Sicherheit
+Textstelle: „This tool not only detects suspicious content in real time but also allows users to report unflagged threats, facilitating an ongoing feedback loop to strengthen detection over time.“
+Seite/Abschnitt: Seite 41, Abschnitt 1 (Introduction).
+Relevanz: KI-basierte Tools verändern die Cybersicherheit von einer statischen Mauer hin zu einem lernenden System, das durch Nutzerinteraktion stetig präziser wird."
+23.;Efficient Malware Analysis Using Metric Embeddings;Rudd et al.;2024;"1. Massive Reduktion der Hardware-Anforderungen für High-End-Analysen
+Textstelle: „Storing the full 2381-dimensional feature vectors requires 74.4 times the amount of storage as that of the 32-dimensional embeddings, indicating that in practice, the top-performing embeddings significantly reduce the storage burden at a slight reduction in net performance. [...] the SOREL transfer experiments can be trained in-memory on a laptop when using 32-dimensional embeddings. The original SOREL dataset [...] takes up more than 300 GB of RAM.“
+Seite/Abschnitt: Seite 4:11, Abschnitt 4.2 / Seite 4:17, Abschnitt 5.4.
+Relevanz: Dies ist für KMUs zentral: KI-basierte Embeddings ermöglichen es, komplexe Malware-Erkennungsmodelle, die normalerweise Rechenzentrums-Infrastruktur (300 GB RAM) erfordern würden, auf einem handelsüblichen Laptop zu trainieren und zu betreiben
+.
+2. „Approximation“ teurer Experten-Analysen durch leichtgewichtige statische Modelle
+Textstelle: „This allows us to explore whether it is possible to approximate more expensive analysis with lower-overhead static representations. [...] In contrast to Type 1 and Type 2 approaches, we rely on lightweight, endpoint viable features, while learning a metric from the rich semantic knowledge of disassembly.“
+Seite/Abschnitt: Seite 4:2, Abschnitt 1 / Seite 4:5, Abschnitt 2.3.3.
+Relevanz: Traditionell erfordert tiefe Malware-Analyse (Disassembly) hochbezahlte Experten und viel Zeit. Der KI-Ansatz erweitert die Möglichkeiten von KMUs, indem er das Wissen aus diesen teuren Analysen in kompakte Modelle „destilliert“, die in Echtzeit auf Endgeräten laufen können, ohne dass dort tatsächlich ein Disassembly stattfinden muss
+.
+3. Reduktion von „Technical Debt“ und Beschleunigung von Updates
+Textstelle: „ML models come with significant technical debt: they need to be retrained as malware evolves [...] model re-training can take multiple weeks. [...] derive low-dimensional representations [...] can be used to reduce complexity and resource requirements for downstream tasks? This could significantly enhance capability for training classifiers for novel applications, performing rapid iteration/experimentation, and efficiently updating deployed models.“
+Seite/Abschnitt: Seite 4:2, Abschnitt 1.
+Relevanz: Traditionelle KI-Systeme sind oft zu starr und wartungsintensiv für KMUs. Dieser Ansatz verändert die Cybersicherheit, indem er die Wiederauffrischungszyklen der Modelle von Wochen auf Bruchteile davon verkürzt, was eine schnellere Reaktion auf neue Bedrohungen ermöglicht
+.
+4. Vielseitigkeit durch Transfer-Learning (Ein Modell für viele Aufgaben)
+Textstelle: „[Ours is the first work that aims to] utilize metric learning losses to enrich compact, statically derived embedding representations with capability and behavioral data. [...] a low-dimensional embedding which performs well for a variety of classification/information retrieval tasks could yield significant computational and storage savings.“
+Seite/Abschnitt: Seite 4:5, Abschnitt 2.3.3 / Seite 4:18, Abschnitt 6.
+Relevanz: Statt für jede Bedrohungsart (Ransomware, Spyware, etc.) ein eigenes schwerfälliges System zu benötigen, ermöglicht die KI-basierte Einbettung eine „All-in-One“-Basis, die flexibel für verschiedene Sicherheitsaufgaben (Detektion, Familien-Klassifizierung, Attribut-Tagging) angepasst werden kann
+.
+5. Neue Risiken: Die Kehrseite der KI-Erweiterung
+Textstelle: „adding task-specific objectives greatly improved performance on multiple downstream tasks, but at the cost of catastrophic loss of robustness to evasion. [...] [The] multi-objective model [...] makes the decision boundary extremely brittle w.r.t. specific features.“
+Seite/Abschnitt: Seite 4:17, Abschnitt 6 / Abschnitt 5.3.
+Relevanz: Das Paper warnt davor, dass die KI-Erweiterung der Cybersicherheit neue Schwachstellen schafft. Hochspezialisierte KI-Modelle können „brüchig“ gegenüber gezielten Täuschungsversuchen (Adversarial Attacks) werden, was KMUs bei der Auswahl der Modelle berücksichtigen müssen
+."
+24.;Near Realtime Attack Detections with Weka Framework;Türen et al.;2025;"1. Kostengünstiger Einstieg („Low-Cost Entry Level“) durch Tool-Kombination
+Textstelle: „These two tools [NetworkMiner und Weka] can be combined to provide an efficient low-cost entry level way to monitor a network system as the SME migrates towards the 'near real-time detection' state [...]. Both Weka and Network Miner are free tools, making them accessible for SMEs with limited budgets.“
+Seite/Abschnitt: Seite 332, Abschnitt 1 / Seite 341, Abschnitt 5.
+Relevanz: KI-basierte Ansätze erweitern die Cybersicherheit von KMUs, indem sie die finanzielle Hürde massiv senken. Während professionelle Lösungen oft teuer sind, ermöglicht die Kombination aus Freeware und ML-Frameworks einen „Einstiegsschutz“, der für Kleinstunternehmen (unter 10 Mitarbeiter) finanziell tragbar ist
+.
+2. Kompensation fehlender Experten-Teams (Demokratisierung)
+Textstelle: „This explorative approach proves us, if an SME does not have professionals in Cybersecurity field, then they can begin to detect attacks by performing NetworkMiner to catch packets and analyse them vie Weka framework.“
+Seite/Abschnitt: Seite 342, Abschnitt 6 (Conclusion).
+Relevanz: Traditionelle Maßnahmen erfordern oft spezialisierte CERT-Teams
+. KI verändert diesen Ansatz, indem sie es auch Nicht-Experten ermöglicht, komplexe Paketanalysen durchzuführen, da die ML-Modelle die Klassifizierung der Bedrohungen übernehmen
+.
+3. Verschiebung von Expertenwissen zu GUI-gesteuerter Analyse
+Textstelle: „Weka’s graphical interface is intuitive, allowing users without extensive ML expertise to perform complex analyses. [...] it is important for an SME to understand the basics of ML, which are now mandatory to analyse network traffic.“
+Seite/Abschnitt: Seite 341, Abschnitt 5 / Seite 343, Abschnitt 6.
+Relevanz: Der technologische Ansatz ändert sich von Kommandozeilen-basierten Experten-Tools hin zu grafischen Oberflächen (GUIs), die komplexe statistische Modelle (wie J48 oder JRip) für Laien bedienbar machen
+.
+4. Performance-Abwägung: Präzision vs. Zeitaufwand in Echtzeit
+Textstelle: „Weka’s JRip algorithm achieved the highest accuracy (96.28%) [...] However, a significant drawback of such algorithms is their time-consuming nature. For instance, processing 25,000 records with JRip took at least two minutes. [...] If we want to have a more near real time approach, then we must check the hardware performance.“
+Seite/Abschnitt: Seite 339, Abschnitt 4 / Seite 342, Abschnitt 5.
+Relevanz: Das Paper zeigt konkret auf, dass KI die traditionelle Sicherheit um hohe Präzision erweitert, aber gleichzeitig eine neue Herausforderung für KMUs schafft: Die Wahl zwischen hochpräzisen, aber langsamen „regelbasierten“ Algorithmen (JRip) und extrem schnellen, aber weniger genauen Modellen (Naive Bayes)
+.
+5. Erweiterung der Detektionsbasis: Vom „Surface Web“ zum „Dark Web“
+Textstelle: „...monitoring system, which can detect all attack types from various online locations. [...] use the ML techniques within the Weka framework for analysis [...] to detect a fully labelled dataset of network packets [...] in near real time.“
+Seite/Abschnitt: Seite 332, Abstract / Seite 342, Abschnitt 6.
+Relevanz: KI erweitert den Schutzraum, indem sie Muster erkennt, die für Angriffe aus anonymen Netzwerken (Dark Web) typisch sind, was mit rein signaturbasierten Filtern schwieriger zu erfassen wäre
+."
+25.;AI-Based Optimization of Blockchain Protocols for Cybersecurity in IoT Systems in Medium-Sized Organizations;Shneina et al.;2025;"1. Schaffung eines autonom lernenden, selbstadaptiven Systems
+Textstelle: „Smart contracts implement pre-defined playbooks to comply with AI alerts, such as revoking access, modifying permissions, or applying security patches. [...] A self-consistent, self-adaptive cybersecurity system that can respond to new threats without human intervention is built using our framework.“
+Seite/Abschnitt: Seite 22, Abschnitt I (Significance/Implementation).
+Relevanz: Dies markiert eine fundamentale Erweiterung: Traditionelle Maßnahmen erfordern oft manuelle Eingriffe nach einem Alarm. KI transformiert diesen Prozess in ein autonomes System, das in Echtzeit (via Smart Contracts) physische Netzwerkänderungen (z.B. Isolierung von Segmenten) ohne menschliches Zutun vornimmt.
+2. Lösung des Skalierungsproblems bei Ressourcenknappheit
+Textstelle: „Where traditional approaches lag, arising through their very complexity and inflexible nature, are in scenarios supported by the blockchain's decentralized architecture. [...] scalability finds itself aptly reflected in the AI cyberspace, where the distribution sector is increasingly nearer to the data source. With this reduction in latency, real-time anomaly detection can be performed without incurring a load on the underlying network.“
+Seite/Abschnitt: Seite 43, Abschnitt IV (Conclusion).
+Relevanz: KI verändert die Cybersicherheit von KMUs, indem sie die Ineffizienz traditioneller (oft zentralisierter) Sicherheitsarchitekturen überwindet. Sie ermöglicht eine Dezentralisierung der Erkennung („Edge-Computing“-nah), wodurch Latenzen sinken und die Sicherheit skalierbar wird, ohne die IT-Infrastruktur des KMU zu überlasten.
+3. Dynamische Sicherheitskontrollen statt statischer Regeln
+Textstelle: „[This study] uses AI-powered smart contracts to dynamically change security measures, overcoming static system flaws. [...] focusing on IoT systems, where risks and resource constraints are high.“
+Seite/Abschnitt: Seite 24/25, Abschnitt I (Comparison with previous research).
+Relevanz: KI-basierte Ansätze erweitern die Sicherheit von KMUs, indem sie statische Abwehrmechanismen (z.B. feste Firewall-Regeln) durch dynamische Protokolle ersetzen, die sich an die aktuelle Bedrohungslage im IoT-Netzwerk anpassen.
+4. Quantifizierbare Wirksamkeit der KI-Blockchain-Integration
+Textstelle: „The results showed that AI-enhanced blockchain protocols were significantly associated with improved cybersecurity outcomes (R² = 0.947) [...]. AI played a significant positive role in real-time threat detection and mitigation.“
+Seite/Abschnitt: Seite 3 (Abstract) / Seite 38 (Results).
+Relevanz: Das Paper liefert einen konkreten statistischen Beleg (94,7 % Varianzaufklärung), dass die Kombination von KI und Blockchain die Effektivität der Cybersicherheit in mittelständischen Organisationen drastisch erhöht, was über bloße theoretische Annahmen hinausgeht.
+5. Automatisierung von Compliance und Auditing
+Textstelle: „A significant portion of this expenditure [compliance costs] is attributed to manual processes, such as data collection, reporting, and auditing [...]. Blockchain's immutable ledger tracks and verifies compliance, while smart contracts automate policy enforcement.“
+Seite/Abschnitt: Seite 6 (Introduction) / Seite 17.
+Relevanz: KI erweitert die Cybersicherheit hier um eine ökonomische Komponente: Sie ersetzt manuelle, fehleranfällige Compliance-Audits durch automatisierte, manipulationssichere Protokolle, was besonders für KMUs mit begrenzten Personalressourcen entscheidend ist."
+26.;A Hybrid AI-Graph Engine for the All-in-One Automated Security Operations Center (SOC);Fatih et al.;2026;"1. Automatisierte Interpretation statt manueller Analyse-Engpässe
+Textstelle: „By automating the manual interpretation phase, this engine transforms raw EDR alerts into actionable response playbooks, thereby bridging the critical gap between threat detection and automated response.“
+Abschnitt: Abstract.
+Relevanz: Traditionelle Sicherheitsmaßnahmen in KMUs scheitern oft an der „Analyse-Lücke“: Man hat zwar Detektionstools, aber kein Personal für die Auswertung. Die KI verändert dies, indem sie die Interpretation von Rohdaten (Telemetrie) übernimmt und direkt in Handlungsanweisungen übersetzt.
+2. Transformation von Information in maschinenausführbare Befehle
+Textstelle: „For automation to be effective, threat intelligence must be converted from human-readable reports into machine-executable commands. [...] a threat query is transformed into a direct remediation command, allowing the system to initiate self-defense protocols. This reduces the time-to-remediation from hours or days to mere seconds.“
+Abschnitt: I.B (From Information to Action).
+Relevanz: KI-basierte Ansätze erweitern die Abwehr von passiven Berichten hin zu aktiven Selbstschutzprotokollen. In KMUs, wo oft kein 24/7-Personal vorhanden ist, ist diese Fähigkeit, Angriffe in Sekunden statt Tagen autonom zu neutralisieren, eine fundamentale Veränderung.
+3. Hybrid-Ansatz: LLM als „Analyst“ und Graph als „Gehirn“
+Textstelle: „(1) A Large Language Model (LLM) service analyzes raw data (e.g., process trees) to infer relevant MITRE ATT&CK Tactics, Techniques, and Procedures (TTPs). (2) The identified TTP is subsequently employed to query a Knowledge Graph (Neo4j), retrieving critical enrichment data (e.g., Threat Actors, Mitigations) and associated compliance mappings (e.g., NIST, CIS).“
+Abschnitt: Abstract / III.C.
+Relevanz: Das Paper zeigt eine spezifische technische Erweiterung: Die Kombination von LLMs (für die logische Schlussfolgerung aus Prozessbäumen) und Wissensgraphen (für den Kontext). Dies ermöglicht KMUs ein Schutzniveau, das normalerweise ein SOC mit mehreren Experten erfordern würde.
+4. Massive Beschleunigung der „Investigation Phase“ (95,8 % Zeitersparnis)
+Textstelle: „Our engine reduces investigation time from the 10-minute (600-second) benchmark to approximately 25 seconds. This represents an improvement of over 95.8%, enabling investigations to occur at machine speed.“
+Abschnitt: V.B (Performance Evaluation).
+Relevanz: Dies ist ein konkreter Beleg dafür, wie KI die traditionelle „1/10/60 Challenge“ (Detektion/Untersuchung/Behebung) für KMUs handhabbar macht. Die KI skaliert die knappe Ressource „Zeit“ massiv.
+5. Integration von Open-Source-Tools in automatisierte Ökosysteme
+Textstelle: „This research addresses a critical gap [...] the integration of open-source Endpoint Detection and Response (EDR) tools with automated systems. [...] enabling EDR tools to function as integrated components of an automated defense ecosystem.“
+Abschnitt: I.C (Bridging Open-Source EDR and Automation).
+Relevanz: KI erweitert die Cybersicherheit von KMUs, indem sie kostengünstige Open-Source-Lösungen (wie OpenEDR) durch eine KI-Schnittstelle (API Bridge) so leistungsfähig macht wie teure kommerzielle Suiten."
+27.;Empowering Small and Medium Enterprises with CyberQ Chatbot: A Knowledge Graph Enhanced Large Language Model;Jose et al.;2025;"1. Erweiterung um automatisierte Compliance- und Dokumentationsunterstützung
+Textstelle: „CyberQ addresses these barriers by leveraging a knowledge graph to deliver context-aware, expert-level guidance, readiness assessments, and automated documentation support.“
+Seite/Abschnitt: Seite 6, Abschnitt 5 (Conclusion).
+Relevanz: KI erweitert traditionelle Maßnahmen, die oft rein technischer Natur sind (Firewalls, Antivirus), um eine administrative Schutzschicht. Sie automatisiert die Vorbereitung auf Zertifizierungen und die Erstellung notwendiger Sicherheitsdokumentationen, was bisher manuell und ressourcenintensiv war
+.
+2. Präzisionssteigerung durch die Kombination von LLMs und Knowledge Graphs
+Textstelle: „The proposed architecture aims to integrate Stardog as the semantic knowledge graph platform [...] while Retrieval-Augmented Generation (RAG) dynamically fetches relevant graph facts to feed into an LLM [...] enabling context aware, accurate responses.“
+Seite/Abschnitt: Seite 6, Ende Abschnitt 4 (Results and Discussion).
+Relevanz: Dieses Paper zeigt eine spezifische technologische Erweiterung: Die Kombination von Large Language Models (LLMs) mit Knowledge Graphs (KG). Dies löst das Problem der „Halluzinationen“ bei KI-Antworten und stellt sicher, dass die Sicherheitsberatung für KMUs auf verifizierten Standards (wie ISO 27001 oder Essential Eight) basiert
+.
+3. Demokratisierung und „Entmystifizierung“ komplexer Standards
+Textstelle: „...an AI-powered chatbot underpinned by a cyber security standards and frameworks knowledge graph, designed to support Australian SMEs in navigating cyber security challenges and certification processes [...] to demystify standards like ISO 27001, DISP, and the Essential Eight.“
+Seite/Abschnitt: Seite 1 (Abstract).
+Relevanz: KI verändert den Zugang zu Cybersicherheit, indem sie komplexe, oft teure und „elektronisch verstreute“ Experten-Frameworks in eine einfache, dialogorientierte Form übersetzt
+. Dies ermöglicht es auch Nicht-Experten in KMUs, Sicherheitsstandards ohne externe Berater zu verstehen
+.
+4. Überbrückung der Lücke zwischen Daten und Entscheidung
+Textstelle: „As SMEs adopt AI, platforms can manage their integrations by providing tailored scalable solutions that bridge the gap between technological limitation and data driven decision-making.“
+Seite/Abschnitt: Seite 3, Abschnitt 2 (Literature Review).
+Relevanz: KI-basierte Ansätze verändern die traditionelle Cybersicherheit von einer rein reaktiven IT-Aufgabe hin zu einem datengestützten Entscheidungsprozess, der skalierbar ist und sich an die spezifischen Ressourcenbeschränkungen des KMU anpasst
+.
+5. Rollenwandel der KI zum „Virtual Staff Trainer“
+Textstelle: „...most of them saw potential for AI-driven tools—particularly chatbots and readiness assessment platforms to reduce administrative overhead, provide tailored guidance, and support staff training.“
+Seite/Abschnitt: Seite 5, Abschnitt 4 (Results and Discussion).
+Relevanz: Die traditionelle Sicherheitsschulung wird durch KI-Chatbots zu einem kontinuierlichen, interaktiven Prozess erweitert, der den Fachkräftemangel in KMUs abmildert, indem er „Expertenwissen auf Abruf“ für das gesamte Personal bereitstellt
+."
+28.;Building Resilient SMEs: Harnessing Large Language Models for Cyber Security in Australia;Kereopa-Yorke;2024;"1. Erschließung unstrukturierter Daten als neue Schutzdimension
+Textstelle: „LLMs, a particular subset of AI, have the potential to revolutionise the interpretation of unstructured data, which is frequently sidelined in conventional cyber security approaches.“
+Seite/Abschnitt: Seite 1, Introduction
+Relevanz: KI (speziell LLMs) erweitert die Sicherheitsmaßnahmen, indem sie Informationen aus unstrukturierten Quellen nutzbar macht, die von traditionellen, oft auf strukturierten Logs basierenden Ansätzen ignoriert werden.
+2. Automatisierte, kontextspezifische Sicherheitsbewertung
+Textstelle: „Hence, the need for automated cybersecurity assessment, adjusted to the SMEs’ context, becomes apparent.“
+Seite/Abschnitt: Seite 2, Abschnitt 1.1 (Cyber Security Challenges for SMEs)
+Relevanz: Da KMUs oft keine eigenen Experten haben, verändern KI-Ansätze die Lage, indem sie automatisierte Sicherheitsbewertungen ermöglichen, die speziell auf den sozio-technischen Kontext des KMU zugeschnitten sind.
+3. Unterstützung bei der Erstellung von Sicherheitsrichtlinien
+Textstelle: „The findings highlight the promising potential of LLMs across various performance criteria, including relevance, accuracy, and applicability [...] GPT-4 model was identified as the most potent AI model for formulating cyber security policies for SMEs.“
+Seite/Abschnitt: Seite 1, Abstract / Seite 6, Conclusion
+Relevanz: Traditionell ist die Erstellung von Policies eine Expertenaufgabe. Dieses Paper zeigt konkret, dass LLMs (insbesondere GPT-4) KMUs dabei unterstützen können, relevante und anwendbare Sicherheitsrichtlinien selbst zu formulieren, was die Barriere für organisatorische Sicherheit senkt
+."
+29.;Investigating the Security Divide between Large Companies: How SME Characteristics Influence Organizational IT Security Investments;Heidt et al.;2019;"Textstelle: „[...] several managing directors and some CIOs mentioned that they rely heavily on their ‘gut feeling’ due to the lack of information, knowhow, and time for decisions. This demonstrates that decision-makers draw on affective and experiential factors [...] rather than on economic modelling or formalized decision support systems.“
+Seite/Abschnitt: Seite 1297 (Abschnitt 4.5)
+Relevanz: Traditionelle Sicherheitsmaßnahmen in KMUs sind oft informell und hängen von der subjektiven Einschätzung der Führungsebene ab. KI-Ansätze erweitern dieses Modell um eine objektive, datengesteuerte Komponente. Sie ersetzen das riskante „Bauchgefühl“ durch automatisierte Analysen und liefern die Informationen, für deren manuelle Beschaffung KMU-Managern die Zeit fehlt."
+30.;Systematic Approach to Cyber Resilience Operationalization in SMEs;Carias et al.;2020;"extstelle: „For instance, implementing network segmentation can be complex and most current techniques depend on manual configurations in which many companies make mistakes
+.“
+ (In Verbindung mit Referenz
+: „Machine learning to automate network segregation for enhanced security in industry 4.0“
+).
+Abschnitt: VI. B. (Outsourcing) / IX. (References)
+Relevanz: Das Paper identifiziert die manuelle Konfiguration traditioneller Maßnahmen (wie Netzwerksegmentierung) als eine der größten Schwachstellen in KMUs. Es verweist explizit auf Machine Learning als Lösung, um diese komplexen Prozesse zu automatisieren und so die durch menschliches Versagen entstehenden Sicherheitslücken zu schließen.
+2. Paradigmenwechsel: Von „Fail-Safe“ zu „Safe-to-Fail“
+Textstelle: „The traditional cybersecurity approach of an intended ‘fail-safe’ protection cannot withstand the ever-evolving environment [...] opposite to traditional views of cybersecurity, is to prepare the company to be a ‘safe-to-fail’ system in order to maintain business continuity despite any type of adverse situations, including unexpected and unknown ones.“
+Seite/Abschnitt: Seite 2, Abschnitt I (INTRODUCTION)
+Relevanz: KI-basierte Ansätze verändern die Strategie von KMUs weg von der reinen Prävention („Fail-Safe“) hin zu einem Resilienz-Modell („Safe-to-Fail“). Während traditionelle Maßnahmen oft nur bekannte Bedrohungen blockieren, erweitert die hier beschriebene Resilienz-Logik (die oft auf KI-gestützter Erkennung basiert) die Fähigkeit, auch unbekannte Angriffe zu überstehen und den Betrieb aufrechtzuerhalten.
+3. Automatisierung der Bedrohungsanalyse zur Zeiteinsparung
+Textstelle: „If they do have the personnel, but do not have the tools nor the knowledge to do so, the use of outsourcing would be a faster way of achieving the implementation [...] Since this is an automatic process, one person with training and the correct tools should be able to do this faster than the company who has to find the tools...“
+Abschnitt: VI. B. 3) (OUTSOURCING FOR TIME EXAMPLE)
+Relevanz: Das Paper hebt hervor, dass die Bedrohungs- und Schwachstellenanalyse heute ein „automatischer Prozess“ ist. Für KMUs bedeutet dies eine Erweiterung ihrer Kapazitäten: Durch automatisierte (oft KI-gestützte) Tools können Analysen schneller und präziser durchgeführt werden, als es mit herkömmlichen manuellen Methoden möglich wäre."
+31.;Industry 4.0 enabled Digital Transformation: Prospects, Instruments, Challenges and Implications for Business Strategies;Yaqub & Alsabban;2023;"Relevante Textausschnitte
+1. Reduktion menschlicher Fehler und Steigerung der Reaktivität durch KI
+Textstelle: „the use of AI minimizes the number of human errors [...] increases precision, and ensures maximum responsiveness and adaptability to the external environment.“
+Abschnitt: 5.4. Artificial Intelligence (AI)
+Relevanz: Dieser Ausschnitt zeigt auf, wie KI traditionelle Cybersicherheitsmaßnahmen verändert: weg von manueller, oft fehlerbehafteter Überwachung hin zu einem System, das autonom und präzise auf Bedrohungen reagiert. Die Erweiterung liegt hier in der „maximalen Anpassungsfähigkeit“ an sich ständig ändernde externe Bedrohungslagen, was KMU-Personal oft nicht leisten kann.
+2. Cybersicherheit als „Safe Transaction Platform“ für die gesamte Lieferkette
+Textstelle: „Suppliers, consumers, 3PLs, subcontractors, outsourcing, and e-procurement benefit from the cybersecurity dimension, which offers a safe transaction platform and increases trust among supply-chain stakeholders.“
+Abschnitt: 6.8. I 4.0 Supply Chain Integration and Firm Performance
+Relevanz: KI-gestützte Industrie 4.0-Ansätze erweitern die Cybersicherheit über die Grenzen des KMUs hinaus. Sie schaffen eine sichere Transaktionsplattform, die das Vertrauen in der gesamten Lieferkette (Supply Chain) stärkt. Damit wird Sicherheit von einer internen Barriere zu einem Instrument der zwischenbetrieblichen Zusammenarbeit erweitert."
