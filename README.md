@@ -16,6 +16,12 @@ The paper is based on a **systematic literature review (SLR)** conducted in acco
 
 The literature search was carried out in the databases **Scopus**, **EBSCOhost**, **IEEE Xplore**, **ACM Digital Library**, and **AISeL**. The search focused on scientific publications at the intersection of artificial intelligence, cybersecurity, and small and medium-sized enterprises.
 
+The following Boolean search string was used across the selected databases and applied to title, abstract, and keywords:
+
+```text
+("artificial intelligence" OR "machine learning" OR "AI") AND ("cybersecurity" OR "information security") AND ("small and medium enterprise*" OR "SME*")
+```
+
 The study selection followed a structured screening process based on predefined inclusion and exclusion criteria. The final literature base was analyzed using a **concept-oriented approach according to Webster and Watson (2002)**. The coding data and concept matrix provided in this repository document the analytical process.
 
 ## Results
